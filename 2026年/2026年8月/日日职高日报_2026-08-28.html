@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日日职高 · 08.28-08.29 双日合刊</title>
+  <style>
+    :root {
+      --bg: #f2f3f5;
+      --card-bg: #ffffff;
+      --text: #1f2329;
+      --muted: #6b7280;
+      --accent: #ff4d6a;
+      --accent-light: #ffe0e6;
+      --border: #ececec;
+      --quote-bg: #f8f9fa;
+      --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+    body.dark {
+      --bg: #121212;
+      --card-bg: #1e1e1e;
+      --text: #e8e8e8;
+      --muted: #9ca3af;
+      --accent: #ff7a93;
+      --accent-light: #3a2228;
+      --border: #2a2a2a;
+      --quote-bg: #262626;
+      --shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Header */
+    .site-header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0 12px;
+      margin-bottom: 24px;
+    }
+    .header-main {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .title-block h1 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .title-block .date {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 2px;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icon-btn,
+    .history-link {
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s;
+      white-space: nowrap;
+    }
+    .icon-btn:hover,
+    .history-link:hover {
+      background: var(--accent-light);
+    }
+    .day-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 14px;
+    }
+    .nav-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .nav-btn:hover {
+      opacity: 0.85;
+    }
+
+    /* Modules */
+    .module {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 22px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .module-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .module-title .badge {
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 8px;
+      padding: 2px 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .module h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin: 20px 0 10px;
+      padding-top: 16px;
+      border-top: 1px dashed var(--border);
+    }
+    .module h3:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    .module p,
+    .module li {
+      color: var(--text);
+    }
+    .overview-list {
+      list-style: none;
+    }
+    .overview-list li {
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    .overview-list li::before {
+      content: "▍";
+      color: var(--accent);
+      position: absolute;
+      left: 4px;
+      font-weight: 700;
+    }
+
+    /* Quotes */
+    .quote {
+      background: var(--quote-bg);
+      border-left: 4px solid var(--accent);
+      padding: 12px 14px 12px 16px;
+      border-radius: 8px;
+      margin: 16px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .quote-text {
+      flex: 1;
+      font-size: 15px;
+    }
+    .quote-source {
+      display: block;
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .copy-btn {
+      flex-shrink: 0;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .copy-btn:hover {
+      opacity: 0.8;
+    }
+
+    /* Resource list */
+    .resource-list {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+    .resource-list li {
+      margin-bottom: 8px;
+    }
+    .resource-list a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .resource-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      padding: 18px 0 28px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .site-footer .day-nav {
+      max-width: 400px;
+      margin: 0 auto 14px;
+    }
+    .site-footer .history-link {
+      display: inline-block;
+      margin-top: 8px;
+    }
+    .copyright {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    /* Floating buttons */
+    .fab {
+      position: fixed;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      color: var(--text);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      z-index: 999;
+      transition: 0.2s;
+    }
+    .fab:hover {
+      background: var(--accent-light);
+    }
+    #backTop {
+      bottom: 24px;
+      display: none;
+    }
+    #tocBtn {
+      bottom: 80px;
+    }
+    .toc-panel {
+      position: fixed;
+      right: 72px;
+      bottom: 80px;
+      width: 180px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 14px;
+      z-index: 999;
+      display: none;
+    }
+    .toc-panel.open {
+      display: block;
+    }
+    .toc-panel .toc-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .toc-panel a {
+      display: block;
+      padding: 6px 8px;
+      border-radius: 6px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .toc-panel a:hover {
+      background: var(--accent-light);
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 12px;
+      }
+      .module {
+        padding: 18px;
+      }
+      .toc-panel {
+        right: 16px;
+        bottom: 130px;
+        width: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-main">
+        <div class="title-block">
+          <h1>📘 日日职高</h1>
+          <div class="date">2026.08.28 - 08.29 · 双日合刊</div>
+        </div>
+        <div class="header-actions">
+          <a href="https://gaogaoselfmedialearninggroup.github.io/x/2026/08/daily_report_2026-08-27.html" class="history-link" target="_blank" rel="noopener">📚 历史日报</a>
+          <button id="darkToggle" class="icon-btn" title="切换深色模式">🌙</button>
+        </div>
+      </div>
+      <nav class="day-nav">
+        <a href="daily_report_2026-08-27.html" class="nav-btn">← 上一天</a>
+        <a href="daily_report_2026-08-30.html" class="nav-btn">下一天 →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- 一、今日群聊速览 -->
+    <section class="module" id="module1">
+      <h2 class="module-title"><span class="badge">一</span>今日群聊速览</h2>
+      <ul class="overview-list">
+        <li>今日高频关键词：爆款拆解、创作者安全边界、账号运营与商单机会。</li>
+        <li>账号里程碑：群内两位老师分别迎来笔记阅读破 2w / 粉丝破千。</li>
+        <li>热点预警：某热点人物相关笔记被批量限制，内容合规再次被热议。</li>
+        <li>资源更新：护肤赛道搜索/投放榜单发布，多项商单与置换机会同步更新。</li>
+      </ul>
+    </section>
+
+    <!-- 二、职通时刻・深度话题 -->
+    <section class="module" id="module2">
+      <h2 class="module-title"><span class="badge">二</span>职通时刻・深度话题</h2>
+      <h3>粉丝私信越界？创作者要补的“安全边界”课</h3>
+      <p><strong>起因：</strong>群内大壮老师收到一条私信，对方追问其婚姻/伴侣相关细节，并带有越界暗示。</p>
+      <p><strong>信号判断：</strong></p>
+      <blockquote class="quote">
+        <span class="quote-text">“如果有个男的一直跟我聊自己的媳妇，我就要警铃大作了。对方在试探我。”</span>
+        <button class="copy-btn" onclick="copyQuote(this)">复制</button>
+      </blockquote>
+      <p>群友补充道：本身询问到私人关系就已经越界，若对方还说出“我可以当着你的面越过这个界限”，暗示意味就更明显了。</p>
+      <p><strong>边界 SOP：</strong></p>
+      <blockquote class="quote">
+        <span class="quote-text">“遇到那种并不是在问具体的‘ta自己’的事，而是在问‘你的事’的，就不要回了。”</span>
+        <button class="copy-btn" onclick="copyQuote(this)">复制</button>
+      </blockquote>
+      <p>同时提醒：美女头像要慎重回复。头像是第一印象，不要轻易回复涉及“你的事”而非“ta自己的事”的私信。</p>
+      <p><strong>长远风险：</strong></p>
+      <blockquote class="quote">
+        <span class="quote-text">“人飘了，就刹不住车，然后性就是第一个突破防线的。”</span>
+        <button class="copy-btn" onclick="copyQuote(this)">复制</button>
+      </blockquote>
+      <p>最终共识：把“异常吸引你注意力的互动”列入风险 SOP，先判断风险，再决定是否回应。</p>
+    </section>
+
+    <!-- 三、避坑指南・问答精选 -->
+    <section class="module" id="module3">
+      <h2 class="module-title"><span class="badge">三</span>避坑指南・问答精选</h2>
+
+      <h3>Q1：过往有诉讼记录，面试/背调会受影响吗？</h3>
+      <p>群内讨论某博主求助帖时，Han 老师提醒：</p>
+      <blockquote class="quote">
+        <span class="quote-text">“这个如果有背调的话，起诉有风险。”</span>
+        <button class="copy-btn" onclick="copyQuote(this)">复制</button>
+      </blockquote>
+      <p>宝鹅老师认为：</p>
+      <blockquote class="quote">
+        <span class="quote-text">“有诉讼直接说明情况就行，还不承认肯定有坑啊。”</span>
+        <button class="copy-btn" onclick="copyQuote(this)">复制</button>
+      </blockquote>
+      <p>AA 昍老师则点破了“不敢承认”的心理：</p>
+      <blockquote class="quote">
+        <span class="quote-text">“就和劈腿一样，因为不知道被抓到的是哪次，所以不敢承认。”</span>
+        <button class="copy-btn" onclick="copyQuote(this)">复制</button>
+      </blockquote>
+      <p>结论：遮遮掩掩反而会被一票否决，宁可诚实面对，不要赌背调查不到。</p>
+
+      <h3>Q2：热点话题能随便蹭吗？</h3>
+      <p>会计王老师报告：</p>
+      <blockquote class="quote">
+        <span class="quote-text">“报，跟景田相关的笔记纷纷被禁了。”</span>
+        <button class="copy-btn" onclick="copyQuote(this)">复制</button>
+      </blockquote>
+      <p>热点发酵期流量虽大，但涉及敏感人物/事件时平台审核会趋严。做内容前先评估合规风险，不要拿账号去赌“流量”。</p>
+    </section>
+
+    <!-- 四、宝藏分享・高能精选 -->
+    <section class="module" id="module4">
+      <h2 class="module-title"><span class="badge">四</span>宝藏分享・高能精选</h2>
+
+      <h3>爆款内容公式</h3>
+      <ul class="resource-list">
+        <li><strong>情绪共鸣 + 故事 + 总结</strong> —— 梅内耗、别有所为老师</li>
+        <li><strong>封面/标题爆论，正文讲故事，结尾加总结</strong> —— 蚂蚁窝老师</li>
+        <li><strong>结构最好三层，人脑才记得住；想更复杂用三三制</strong> —— AA 昍老师</li>
+        <li><strong>底层变体：暴论 → 故事 → 分析</strong> —— 别有所为老师</li>
+      </ul>
+
+      <h3>AI 拆解爆款</h3>
+      <p>别老师用 AI 拆解爆款，不仅还原段落结构，还输出“情绪曲线”，把情绪设计和故事编排可视化，值得一试。</p>
+
+      <h3>本期高价值资源</h3>
+      <ul class="resource-list">
+        <li>
+          <strong>护肤品牌榜：</strong>糕效率老师分享 AI 整理的小红书护肤领域搜索热度 TOP20 与全平台广告投放 TOP 品牌，建议护肤赛道创作者优先分享名单中的品牌。
+        </li>
+        <li>
+          <strong>商机速递：</strong>光年 AI 项目招募（千粉 / 职场或 AI 数码类 / 预算 500 / 报名至 09.04），
+          <a href="https://p.baominggongju.com/detail?eid=6a928ac7611f980a2b3effc6" target="_blank" rel="noopener">报名链接</a>。
+        </li>
+        <li>
+          <strong>置换机会：</strong>另有“知晓单品置换”与“北京宠物医院博主体验置换”等信息，可在群内跟进。
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="day-nav">
+        <a href="daily_report_2026-08-27.html" class="nav-btn">← 上一天</a>
+        <a href="daily_report_2026-08-30.html" class="nav-btn">下一天 →</a>
+      </nav>
+      <a href="https://gaogaoselfmedialearninggroup.github.io/x/2026/08/daily_report_2026-08-27.html" class="history-link" target="_blank" rel="noopener">📚 历史日报链接</a>
+      <p class="copyright">© 2026 日日职高 · 自媒体糕校精选</p>
+    </div>
+  </footer>
+
+  <!-- 侧边目录 -->
+  <button class="fab" id="tocBtn" title="目录">📑</button>
+  <aside class="toc-panel" id="tocPanel">
+    <div class="toc-title">目录导航</div>
+    <a href="#module1">一、今日群聊速览</a>
+    <a href="#module2">二、职通时刻</a>
+    <a href="#module3">三、避坑指南</a>
+    <a href="#module4">四、宝藏分享</a>
+    <a href="https://gaogaoselfmedialearninggroup.github.io/x/2026/08/daily_report_2026-08-27.html" target="_blank" rel="noopener">📚 历史日报</a>
+  </aside>
+
+  <!-- 返回顶部 -->
+  <button class="fab" id="backTop" title="返回顶部">↑</button>
+
+  <script>
+    // 深色模式
+    const body = document.body;
+    const darkToggle = document.getElementById('darkToggle');
+    if (localStorage.getItem('rrzhigao-dark') === '1') {
+      body.classList.add('dark');
+      darkToggle.textContent = '☀️';
+    }
+    darkToggle.addEventListener('click', function () {
+      body.classList.toggle('dark');
+      const isDark = body.classList.contains('dark');
+      darkToggle.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('rrzhigao-dark', isDark ? '1' : '0');
+    });
+
+    // 返回顶部
+    const backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 400) {
+        backTop.style.display = 'flex';
+      } else {
+        backTop.style.display = 'none';
+      }
+    });
+    backTop.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 目录悬浮按钮
+    const tocBtn = document.getElementById('tocBtn');
+    const tocPanel = document.getElementById('tocPanel');
+    tocBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      tocPanel.classList.toggle('open');
+    });
+    document.addEventListener('click', function (e) {
+      if (!tocPanel.contains(e.target) && e.target !== tocBtn) {
+        tocPanel.classList.remove('open');
+      }
+    });
+    tocPanel.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        tocPanel.classList.remove('open');
+      }
+    });
+
+    // 金句复制
+    function copyQuote(btn) {
+      const text = btn.closest('.quote').querySelector('.quote-text').innerText;
+      const done = function () {
+        const original = btn.textContent;
+        btn.textContent = '已复制';
+        setTimeout(function () {
+          btn.textContent = original;
+        }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done).catch(function () {
+          fallbackCopy(text, done);
+        });
+      } else {
+        fallbackCopy(text, done);
+      }
+    }
+
+    function fallbackCopy(text, done) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+      } catch (e) {}
+      document.body.removeChild(ta);
+      done();
+    }
+  </script>
+
+</body>
+</html>
