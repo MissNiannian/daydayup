@@ -6,21 +6,21 @@
     <title>日日职高日报 2026-08-28</title>
     
     <!-- SEO 元数据 -->
-    <meta name="description" content="日日职高日报 2026年8月28日 - 代孕伦理法律红线、催收行业变局、AI创作去AI味、职场考勤背锅避坑指南等精彩内容分享">
-    <meta name="keywords" content="自媒体,职高日报,职场伦理,行业分析,AI创作,职场避坑">
+    <meta name="description" content="日日职高日报 2026年8月28日 - 职场考勤反套路、内容创作去AI味、《欢迎来龙餐馆》的职场启示等精彩内容分享">
+    <meta name="keywords" content="自媒体,职高日报,职场,考勤,AI创作,龙餐馆,内容创作">
     <meta name="author" content="日日职高">
     
     <!-- Open Graph / 社交媒体分享标签 -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="日日职高日报 2026-08-28">
-    <meta property="og:description" content="代孕伦理法律讨论、催收行业变局、AI创作边界与职场背锅避坑指南">
+    <meta property="og:description" content="职场考勤反套路、内容创作去AI味、《欢迎来龙餐馆》的职场启示等精彩内容分享">
     <meta property="og:site_name" content="日日职高">
     <meta property="og:locale" content="zh_CN">
     
     <!-- Twitter Card 标签 -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="日日职高日报 2026-08-28">
-    <meta name="twitter:description" content="代孕伦理法律红线、催收行业变局、AI创作去AI味等精彩内容分享">
+    <meta name="twitter:description" content="职场考勤反套路、内容创作去AI味、《欢迎来龙餐馆》的职场启示等精彩内容分享">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C9T7FPDT2"></script>
@@ -28,15 +28,20 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'G-6C9T7FPDT2');
     </script>
     
     <!-- 深色模式预加载脚本 - 终极防闪烁方案 -->
     <script>
+        // 在DOM解析前立即执行，最大程度避免闪烁
         (function() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
+                // 方案1：为html元素添加类
                 document.documentElement.classList.add('dark-mode-preload');
+                
+                // 方案2：直接设置body的内联样式（更早生效）
                 const style = document.createElement('style');
                 style.textContent = `
                     html, body { background-color: #1a1a1a !important; color: #e5e5e5 !important; }
@@ -92,25 +97,32 @@
                 font-size: 1.5rem;
                 margin-bottom: 1.5rem;
             }
+            
             .number-display {
                 font-size: 3rem;
             }
+            
             .bento-card.p-8 {
                 padding: 1.25rem !important;
             }
+            
             .bento-card.p-6 {
                 padding: 1rem !important;
             }
+            
             .bento-card.p-5 {
                 padding: 0.875rem !important;
             }
+            
             h1.text-5xl {
                 font-size: 2rem !important;
                 margin-bottom: 1.25rem !important;
             }
+            
             h4.text-xl {
                 font-size: 1.125rem !important;
             }
+            
             p.text-xl {
                 font-size: 1rem !important;
             }
@@ -344,6 +356,10 @@
             box-shadow: inset 2px 0 0 0 #10b981;
         }
         
+        body.dark-mode .floating-action-stack {
+            gap: 0.75rem;
+        }
+        
         body.dark-mode .toc-panel {
             background-color: #2a2a2a;
             border-color: #3a3a3a;
@@ -360,6 +376,11 @@
         
         body.dark-mode .toc-close {
             color: #d1d5db;
+        }
+        
+        body.dark-mode .toc-close:hover {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
         }
         
         body.dark-mode .toc-link {
@@ -546,6 +567,10 @@
             color: #f5f5f5 !important;
         }
         
+        body.dark-mode .border-l-4 {
+            opacity: 0.8;
+        }
+        
         body.dark-mode .copy-btn {
             border-color: #6ee7b7;
             color: #6ee7b7;
@@ -580,18 +605,22 @@
             .floating-action-stack, nav, .copy-btn, .expand-btn {
                 display: none !important;
             }
+            
             body {
                 background: white;
                 color: black;
             }
+            
             .bento-card {
                 box-shadow: none;
                 border: 1px solid #ddd;
                 page-break-inside: avoid;
             }
+            
             .content-preview.collapsed {
                 max-height: none !important;
             }
+            
             .content-preview.collapsed::after {
                 display: none;
             }
@@ -603,12 +632,14 @@
                 bottom: 1rem;
                 gap: 0.5rem;
             }
+
             .floating-action-stack .toc-floating-button,
             .floating-action-stack .theme-toggle,
             .floating-action-stack .back-to-top {
                 width: 2.75rem;
                 height: 2.75rem;
             }
+
             .toc-panel {
                 width: calc(100vw - 2rem);
                 max-width: calc(100vw - 2rem);
@@ -622,9 +653,14 @@
         }
         
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
+
     </style>
 </head>
 <body class="bg-white text-black min-h-screen">
@@ -643,15 +679,8 @@
                         </div>
                         <div class="flex items-center text-gray-700">
                             <i class="fas fa-clock mr-2 text-[#4D6BFE]"></i>
-                            <span>2026-08-28 00:00 - 2026-08-29 00:21(次日)</span>
+                            <span>2026-08-28 00:00 - 2026-08-29 00:22(次日)</span>
                         </div>
-                    </div>
-                    <div class="mt-4">
-                        <a id="history-link" href="https://gaogaoselfmedialearninggroup.github.io/x/historical_page_summary.html" 
-                           class="inline-flex items-center gap-2 text-green-600 hover:text-green-700 bg-green-50 hover:bg-green-100 border border-green-200 hover:border-green-300 px-4 py-2 rounded-lg transition-all text-sm font-medium shadow-sm hover:shadow">
-                            <i class="fas fa-history"></i>
-                            <span>职高历史日报</span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -680,7 +709,7 @@
             </h2>
             <div class="bento-card p-8 bg-gradient-to-br from-[#10b981]/20 via-[#10b981]/10 to-[#10b981]/5 text-center rounded-2xl">
                 <div class="number-display text-[#4D6BFE]">
-                    450
+                    448
                 </div>
                 <p class="text-xl font-semibold text-black mt-3">总消息数量</p>
             </div>
@@ -692,32 +721,33 @@
             </h2>
             <div class="space-y-8">
 
-                <!-- 热点话题卡片 1：代孕伦理讨论 开始 -->
+                <!-- 话题卡片 1 -->
                 <div class="bento-card p-6 rounded-xl"> 
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            代孕合法化讨论：职业伦理与法律红线的碰撞
+                            职场边界：当领导让你“代打卡”
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            14:33 - 15:28
+                            20:16 - 21:15
                         </span>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            肥敏蹦叉叉：“朋友的问题，我觉得大家也可以讨论一下，也很想听听日日的想法。”
+                            希希：“他把考勤、排班什么的杂活全都交给我，还专门跟我说了很多次，意思是他不来也给他记成来了，给他算全勤”
                         </p>
                     </div>
 
                     <div class="mb-5">
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">代孕</span>
-                            <span class="tag-item">职业伦理</span>
-                            <span class="tag-item">法律风险</span>
-                            <span class="tag-item">价值观</span>
+                            <span class="tag-item">职场安全</span>
+                            <span class="tag-item">考勤管理</span>
+                            <span class="tag-item">授权风险</span>
+                            <span class="tag-item">留痕意识</span>
+                            <span class="tag-item">软钉子</span>
                         </div>
                     </div>
 
@@ -726,7 +756,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景</b><br>肥敏蹦叉叉老师分享了一位朋友"润和"撰写的立法建议稿，主张将"救助性、补缺性"的代孕合法化，并征求群友意见。这个打着"救助"旗号的提案迅速引发了群内关于伦理、法律与价值观的激烈讨论。<br><br><b>二、主要观点</b><br>1. <b>伦理底线不容突破</b>：<b>阿南pro</b>表示"人怎么可以作为商品"，并从自身视角补充："你作为同志，说出这样的话，我很震惊。"<b>会计王小全</b>直接回怼："我去他妈了个比。"<br>2. <b>法律具有价值引导功能</b>：<b>AA昍</b>指出，"法律不只是事后处理，还有事前引导的功能"，一旦立法放开，就等于宣告"有特权的人可以代孕"，将动摇社会公平的根基。<br>3. <b>灰色地带已存在</b>：<b>笑嘻嘻泳往直前</b>认为"就算国内也有非法代孕的，其实是属于灰色地带"，但正因为如此，更不应在台面上放开。<br>4. <b>警惕"为民请命"的表演</b>：<b>熊熊博</b>一针见血地指出，此君有家有娃却来主张代孕，"每个人都有自己的立场，但把别人当子宫就是坏"。<br><br><b>三、争议焦点</b><br>"一刀切禁止"是否反而加剧了地下黑市的剥削？还是说合法化本身就是一种变相的剥削许可？<br><br><b>四、结论与启发</b><br>经过激辩，大家形成共识：<b>不能以"救助"之名打开代孕合法化口子</b>。有实际需求者可通过海外途径解决，但国内法律必须保持明确的禁止态度，以起到价值引导作用。
+                                    <b>一、话题背景与起因</b><br><b>希希</b>工作的科室里，新来的主任经常旷工，把考勤、排班等杂活都交给她，甚至要求“不来也给他记成来了、用他的账号发上去”。医务科的人又私下鼓动她，在主任不来时通知查岗。<b>希希</b>左右为难，在群里求助。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>授权≠免责</b>：<b>桃乐丝</b>直言“没有授权进别人OA你是要造反啊……这跟高三同学让你登填报系统给他改志愿，然后他反手一个报警，有什么区别？”<b>啊⚆ɞ⚆怿子 -</b>补充“授权这个事本身就是违规的吧，在机场帮忙托运的行李里搜出毒品，就是死定了。”<br>2. <b>职业生命红线</b>：<b>大京</b>一针见血“被抓到也就职业生涯结束了”。并指出一旦出事，对方完全可以推说“我不会OA，都是她弄的”，背锅的只能是执行者。<br>3. <b>对付纠缠的方法</b>：<b>桃乐丝</b>建议“如果负责就留好痕，照样帮他该记就记；不负责就管他娘的”。<b>昍</b>则贡献了“装听不懂同义反复”的话术，让领导知难而退，并总结“多看点历史剧，这都是现成的套路”。<br><br><b>三、结论与启发</b><br>核心原则：<b>先保护自己，再谈配合领导。</b> 不要因为对方是领导就丧失职业底线；单位里的“授权”如果违法违规，口头聊天记录也救不了你。能在流程内做好的事，就不要用“人情”代替。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -744,7 +774,7 @@
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
                                         <p class="text-black text-base">
-                                            法律是底线的守护者，而非特权阶层的通行证。代孕合法化的讨论，本质是在试探社会伦理的边界。
+                                            其实是把“要不要帮领导打掩护”的问题，拉回到了“职场自我保护”的维度。<b>守住流程底线，比讨好领导更值得做</b>。
                                         </p>
                                     </div>
                                 </div>
@@ -754,115 +784,22 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    法律不只是事后处理，还有事前引导的功能。
+                                                    没有授权进别人OA你是要造反啊……
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '法律不只是事后处理，还有事前引导的功能。 - AA昍')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '没有授权进别人OA你是要造反啊…… - 桃乐丝')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
+                                                - <b>桃乐丝</b>
                                             </p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    在黑市被剥削，放台面上，也一样是，总会让你"自愿"。
+                                                    被抓到也就职业生涯结束了。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '在黑市被剥削，放台面上，也一样是，总会让你"自愿"。 - 屁侠')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>屁侠</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    自己并没有这个需求，也不理解社会原理，在那儿虚空自我感动，以为为民请命。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '自己并没有这个需求，也不理解社会原理，在那儿虚空自我感动，以为为民请命。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 热点话题卡片 1 结束 -->
-
-                <!-- 热点话题卡片 2：催收行业变局 开始 -->
-                <div class="bento-card p-6 rounded-xl"> 
-                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
-                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            催收行业剧变：扫黑除恶下的机遇与团队提效
-                        </h4>
-                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
-                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            21:59 - 22:02
-                        </span>
-                    </div>
-
-                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
-                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
-                        <p class="text-sm text-purple-600 italic">
-                            大京：“话说，开启扫黑除恶之后，这个月 80% 的催收公司，要么歇业了，要么分散回家作业了”
-                        </p>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">催收行业</span>
-                            <span class="tag-item">行业变局</span>
-                            <span class="tag-item">团队效率</span>
-                            <span class="tag-item">调解能力</span>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
-                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
-                            <div class="expandable-content" data-char-limit="200">
-                                <div class="content-preview">
-                                    <b>一、话题背景</b><br>大京老师分享了行业内的重磅变化：随着扫黑除恶行动的深入，约80%的催收公司要么歇业，要么转入地下分散作业。这一变局直接导致下月起公司案件量将大幅增加。<br><br><b>二、主要观点</b><br>1. <b>短期机会与挑战并存</b>：大京老师判断"未来半年大概都是这种情况，算是短暂的捡钱机会"，但团队调解成功率目前只处于中等水平。<br>2. <b>效率是核心竞争力</b>：大京老师表示团队正在思考如何"进一步把我们的效率提高"，希望通过探索创新方法，形成可推广至其他团队的成熟经验。<br>3. <b>行业合规化加速</b>：这一变化背后，是监管对"软暴力催收""不缴社保"等乱象的集中整治，行业正经历出清。<br><br><b>三、结论与启发</b><br>行业变局中，合规者得生存，高效者得市场。提前布局调解效率与团队能力建设，是抓住"捡钱窗口期"的关键。
-                                </div>
-                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
-                                    <span class="expand-text">展开全文</span>
-                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
-                        <div class="space-y-6">
-                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
-                                <div class="mb-4">
-                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
-                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
-                                        <p class="text-black text-base">
-                                            行业洗牌期，效率提升是抓住机遇的核心内功。
-                                        </p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
-                                    <div class="space-y-2">
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    算是短暂的捡钱机会。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '算是短暂的捡钱机会。 - 大京')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '被抓到也就职业生涯结束了。 - 大京')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
@@ -873,14 +810,14 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    最近看我们团队自己的调解成功率，还处在公司各团队中等水平。
+                                                    授权这个事本身就是违规的吧。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '最近看我们团队自己的调解成功率，还处在公司各团队中等水平。 - 大京')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '授权这个事本身就是违规的吧。 - 啊⚆ɞ⚆怿子 -')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>大京</b>
+                                                - <b>啊⚆ɞ⚆怿子 -</b>
                                             </p>
                                         </div>
                                     </div>
@@ -889,34 +826,34 @@
                         </div>
                     </div>
                 </div>
-                <!-- 热点话题卡片 2 结束 -->
-
-                <!-- 热点话题卡片 3：AI创作去AI味 开始 -->
+                
+                <!-- 话题卡片 2 -->
                 <div class="bento-card p-6 rounded-xl"> 
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            AI辅助创作：被"腌入味"的警示与"真人感"回归
+                            内容创作去“AI味”：从腌入味到活人感
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            15:31 - 17:19
+                            13:47 - 18:11
                         </span>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            肥敏蹦叉叉："现在跟你聊天，你已经都快没活人味了，感觉被Ai腌入味了。"
+                            屁侠：“现在跟你聊天，你已经都快没活人味了，感觉被Ai腌入味了。”
                         </p>
                     </div>
 
                     <div class="mb-5">
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">AI创作</span>
+                            <span class="tag-item">AI写作</span>
                             <span class="tag-item">真人感</span>
-                            <span class="tag-item">文字风格</span>
-                            <span class="tag-item">独立思考</span>
+                            <span class="tag-item">内容创作</span>
+                            <span class="tag-item">去AI味</span>
+                            <span class="tag-item">叙事节奏</span>
                         </div>
                     </div>
 
@@ -925,7 +862,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景</b><br>肥敏蹦叉叉老师分享了她与朋友"润和"的对话。对方因每天使用AI四五个小时以上，日常聊天都带着浓重的AI腔，被质疑"被AI腌入味了"。这段对话在群内引发了关于AI使用边界的深思。<br><br><b>二、主要观点</b><br>1. <b>过度依赖的代价</b>：<b>Parabox</b>评论"外置AI大脑，复制代替思考"，直指AI使用过度的核心风险。<b>AA昍</b>则犀利分析："有的人原本没有思维能力，现在AI至少帮他们开口了""人类的表达正在被AI反向驯化。"<br>2. <b>语言风格的侵蚀</b>：<b>肥敏蹦叉叉</b>指出对方的每句话都带着"你的看法我特别认同"这类AI常用句式。<b>酱油</b>也发现"他说的话越来越像AI，连自己都察觉不到"。<br>3. <b>保护"活人感"</b>：<b>熊熊博</b>用一句黑色幽默总结："只要我成为弱智，就没有任何人能利用我。"<b>肥敏蹦叉叉</b>则给出实用建议：不要把AI当作思考的替代，而是把它当作工具。<br><br><b>三、争议焦点</b><br>AI到底是"助手"还是"大脑的替代品"？当AI的表述成为习惯，人的独立思考能力是否正在被悄悄抽空？<br><br><b>四、结论与启发</b><br>AI应当服务于人的思考，而非反过来塑造人的表达。保持"真人感"和独立判断力，是内容创作者最核心的护城河。
+                                    <b>一、话题背景与起因</b><br>群友因“代孕立法建议案”发生辨论，<b>屁侠</b>敏锐指出对方“被AI腌入味了”——因为长期使用AI，连说话都自带AI味。由此引发了关于“内容创作如何避免AI味”的大讨论。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>AI味是思维的替代</b>：<b>昍</b>认为“用AI的最大代价是毁脑子，别的其实都是其次”。<b>Parabox</b>说：“没有真的置身于世界之中进行实践，只学语料，就只能变成越来越强的‘伪人’。”<br>2. <b>叙事要“把情绪变成动作”</b>：<b>讨厌的橙子🍊</b>举例“司机扔瓶子”和“陈佩斯吃鸡”——用外部动作表达内心压抑，比直接写“很难过”高级得多。她强调“讲故事，不分析故事，让评论区分析”。<br>3. <b>“报仇不过页”的爽感节奏</b>：现在读者喜欢快节奏，<b>昍</b>建议“上来就是结局”，先展示积极结果再叙述过程，避免长篇累牍的郁闷。<br>4. <b>AI的正确用法</b>：<b>讨厌的橙子🍊</b>总结AI适合“灵感点、概括、初稿、返检逻辑”；<b>高JY</b>分享“AI写框架，自己填肉”，效率与灵魂兼得。<br><br><b>三、结论与启发</b><br>创作的核心永远是“真人感”和真情实感。AI是很好的工具，但它只会堆砌语料，无法代替你真实地生活与感受。想不被替代，就要保持“活人”的表达。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -943,7 +880,7 @@
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
                                         <p class="text-black text-base">
-                                            AI是放大器，不是替代品。失去"真人感"的表达，本质上是被工具驯化而不自知。
+                                            内容创作要回归“人”：AI可以出框架，但真正的画面感要靠长期观察生活、积累细节。<b>“把情绪变成动作”才是高级的叙事技巧。</b>
                                         </p>
                                     </div>
                                 </div>
@@ -953,40 +890,40 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    只要我成为弱智，就没有任何人能利用我。
+                                                    用AI的最大代价是毁脑子，别的其实都是其次。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '只要我成为弱智，就没有任何人能利用我。 - 熊熊博')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '用AI的最大代价是毁脑子，别的其实都是其次。 - 昍')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>熊熊博</b>
+                                                - <b>昍</b>
                                             </p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    外置AI大脑，复制代替思考。
+                                                    讲故事，不分析故事，让评论区分析。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '外置AI大脑，复制代替思考。 - Parabox')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '讲故事，不分析故事，让评论区分析。 - 高JY')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>Parabox</b>
+                                                - <b>高JY</b>
                                             </p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    有的人原本没有思维能力，现在ai至少帮他们开口了。
+                                                    现在都是报仇不过页，翻一页，你得把气出了。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '有的人原本没有思维能力，现在ai至少帮他们开口了。 - AA昍')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '现在都是报仇不过页，翻一页，你得把气出了。 - 讨厌的橙子🍊')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
+                                                - <b>讨厌的橙子🍊</b>
                                             </p>
                                         </div>
                                     </div>
@@ -995,7 +932,112 @@
                         </div>
                     </div>
                 </div>
-                <!-- 热点话题卡片 3 结束 -->
+                
+                <!-- 话题卡片 3 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            《欢迎来龙餐馆》观后：职场与组织行为的启示
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            19:48 - 20:50
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            猫猫🌟：“看了《欢迎来龙餐馆》这部电影，票价29元，感谢共产观影活动！”
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">组织行为</span>
+                            <span class="tag-item">职场逻辑</span>
+                            <span class="tag-item">向上汇报</span>
+                            <span class="tag-item">领导责任</span>
+                            <span class="tag-item">观影共学</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景与起因</b><br>多位群友参加“共产观影”活动后，针对电影《欢迎来龙餐馆》展开了延伸讨论，并意外提炼出了一套“职场生存与组织逻辑”。<br><br><b>二、主要观点与讨论详情</b><br>1. <b>职场逻辑来自组织行为</b>：<b>猫猫🌟</b>总结“每个人的选择都会引向接下来的命运；出了问题要先找头儿，做好汇报很重要——又回到了职场逻辑”。<br>2. <b>文化自信与规则自信</b>：<b>qiqi</b>指出“扎伊德说菜咸了，是想说中国文化在这地方行不通。但小徒弟的餐厅开了20多年，说明了中国文化的强大普适性”。<br>3. <b>组织内外有别</b>：<b>笑嘻嘻泳往直前🌞</b>用“王二小、刘胡兰”举例，强调“同志们跟我上，不是给我上”——主动担当与强迫欺骗有本质区别。<b>肥敏蹦叉叉</b>补充“中东很复杂，他们有他们的内因，我们有教员、有三湾改编、古田会议”。<br>4. <b>大格局视角</b>：<b>阿南pro</b>推荐曹丰泽的分析“中东问题是他们自己的问题，不是哪个国家能解决的，我们做我们能做的事”。<br><br><b>三、结论与启发</b><br>无论是企业还是更大的组织，职场逻辑的本质都是：<b>担责、汇报、建立信任</b>。要想在组织中生存发展，先搞清楚“谁是头儿，出了事谁负责”，再来谈文化理想。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            电影是现实的隐喻：<b>组织的生命力，来自清晰的权责关系和主动担当的文化</b>，而不是空谈道德。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    出了问题要先找头儿，做好汇报很重要。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '出了问题要先找头儿，做好汇报很重要。 - 猫猫🌟')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>猫猫🌟</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    同志们跟我上，不是给我上。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '同志们跟我上，不是给我上。 - 笑嘻嘻泳往直前🌞')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>笑嘻嘻泳往直前🌞</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    菜是甜是咸，都得他们自己做。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '菜是甜是咸，都得他们自己做。 - 肥敏蹦叉叉')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>肥敏蹦叉叉</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </section>
@@ -1006,19 +1048,19 @@
             </h2>
             <div class="space-y-8">
 
-                <!-- 问答卡片 1：考勤代打 开始 -->
+                <!-- 问答卡片 1 -->
                 <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]"> 
                     <div class="mb-4">
                         <h4 class="text-xl font-semibold text-black flex items-center">
                             <i class="fas fa-question-circle mr-2.5 text-[#4D6BFE] text-lg"></i>
-                            提问：主任要我登录他的OA账号替他打考勤，该照做吗？
+                            提问：主任让我用他的账号代打考勤，我该怎么办？
                         </h4>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            希希："他把考勤、排班什么的杂活全都交给我，还专门跟我说了很多次，意思是他不来也给他记成来了"
+                            希希：“那我还用登他的账号帮他发考勤吗？还是直接走完我自己的流程就够了”
                         </p>
                     </div>
 
@@ -1030,7 +1072,7 @@
                         <div class="text-gray-700 text-base leading-relaxed prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、问题背景</b><br>希希所在科室的新主任长期旷工接私活，却要求希希登录其OA账号代为填报全勤，还叮嘱"别跟别人说"。与此同时，医务科暗中要求希希在主任缺席时通报查岗，这让她陷入两难。<br><br><b>二、核心风险分析</b><br>1. <b>法律与合规风险</b>：<b>阿南pro</b>提醒，私企内部"查到登录别人账号会按违规处理"，甚至可能因此丢工作。<b>啊怿子</b>用"机场帮陌生人托运行李查获毒品"来类比："授权"并不能成为免责的理由。<br>2. <b>背锅风险</b>：<b>AA昍</b>一针见血："免费帮别人干这个活儿，谁信啊？肯定拿好处了。百口莫辩。"<br>3. <b>被当枪使的陷阱</b>：<b>桃乐丝</b>连问三连："你愿意给人当枪使吗？干翻他对你有什么好处？有什么风险？"<br><br><b>三、解决方案与建议</b><br>1. <b>坚决拒绝账号代操作</b>：考勤应由本人操作，不能让别人的账号在自己的使用记录里留下痕迹。<br>2. <b>敷衍战术</b>：<b>AA昍</b>支招"同义反复"——"你帮我登录一下OA？""我帮你登录一下OA？"不断重复对方的指令，让对方知难而退。<br>3. <b>守住边界</b>：<b>桃乐丝</b>建议直接反问："他50多岁不会用OA？75岁的教授都是自己登录系统。"<br>4. <b>做好留痕与自我保护</b>：若医务科要求配合，应保留微信记录，但不要主动"举报"，让子弹飞一会儿。
+                                    <b>一、问题背景</b><br>主任长期旷工，却要求下属用他的 OA 账号代打卡、做全勤。医务科暗中调查，下属担心自己成为替罪羊。<br><br><b>二、核心原因分析</b><br>1. <b>“授权”不是护身符</b>：系统日志会记录登录设备的IP和操作痕迹，一旦出事，主任完全可以说“我不会用OA，都是她操作的”。<br>2. <b>领导在保护自己</b>：口头授权+聊天记录，无法证明操作者是你还是他本人，背锅风险极高。<br>3. <b>你是最容易被牺牲的那个</b>：基层员工永远是问题出现时的追责首选。<br><br><b>三、解决方案与建议</b><br>1. <b>按实际出勤记录</b>，绝不代打卡，也不登录领导账号。<br>2. 主动向医务科说明情况，保留他们要求你配合查岗的微信记录。<br>3. 如果主任再催，用“装糊涂”话术：“你帮我登录一下OA？——我帮你登录一下OA？”让对方知难而退。<br>4. 提升自己的“职场辨识度”，避免成为领导眼中“好说话、无原则”的软柿子。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1042,28 +1084,27 @@
 
                     <div class="mt-5 pt-4 border-t border-gray-200">
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">职场背锅</span>
+                            <span class="tag-item">代打卡</span>
+                            <span class="tag-item">职场风险</span>
                             <span class="tag-item">OA账号</span>
-                            <span class="tag-item">考勤</span>
-                            <span class="tag-item">自我保护</span>
+                            <span class="tag-item">留痕</span>
                         </div>
                     </div>
                 </div>
-                <!-- 问答卡片 1 结束 -->
 
-                <!-- 问答卡片 2：小群融入 开始 -->
+                <!-- 问答卡片 2 -->
                 <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]"> 
                     <div class="mb-4">
                         <h4 class="text-xl font-semibold text-black flex items-center">
                             <i class="fas fa-question-circle mr-2.5 text-[#4D6BFE] text-lg"></i>
-                            提问：对待在融不进去的小群，该保持沉默还是直接退群？
+                            提问：总被说“想太多、内耗”，怎么破解？
                         </h4>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            小喵踩水（每日抄毛选）："有没有人遇到过待在一个几个人的小群，群里的话题接不下去，又不好意思退群的情况哦"
+                            小喵踩水：“根本原因在于我太在意别人看法，或者说太把自己当回事了。”
                         </p>
                     </div>
 
@@ -1075,7 +1116,7 @@
                         <div class="text-gray-700 text-base leading-relaxed prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、问题背景</b><br>小喵踩水坦言，自己所在的一个小群，其他人都聊得很好，唯独自己接不上话题。不退群觉得突兀，退群又怕得罪人，陷入内耗。<br><br><b>二、核心原因分析</b><br>1. <b>过度在意他人看法</b>：小喵踩水自己觉察到"根本上是我太在意别人的看法了，或者说太把自己当回事了"。<br>2. <b>价值观不匹配</b>：群聊内容与自己兴趣点不一致，硬融反而痛苦。<br>3. <b>缺乏主动性</b>：<b>会计王小全</b>建议，"别人的话题插不进去，你就自己起一个嘛"，强调主体性。<br><br><b>三、解决方案与建议</b><br>1. <b>技术降噪</b>：<b>希希</b>提醒"折叠和屏蔽群聊"，眼不见心不烦。<b>AA昍</b>补充：删除聊天记录，群就"不存在"了。<br>2. <b>心态调适</b>：<b>阿南pro</b>认为不必强融，"融不进去可能是价值观差异，接受就好"。<br>3. <b>主动创造话题</b>：如果想保持关系，可以尝试发起自己感兴趣的话题，掌握主动权。<br>4. <b>关注心理根源</b>：小喵踩水最终决定"顺其自然，不要多想和内耗"，并反思自己应该遵医嘱复诊——这或许才是内耗的真正解药。
+                                    <b>一、问题背景</b><br><b>小喵踩水</b>在群里问“几个人小群，话题接不下去，保持沉默尴尬、强行接话不开心、直接退群怕得罪人，怎么办？”<br><br><b>二、核心原因分析</b><br>1. <b>不是群的问题，是对自我价值的怀疑</b>。<b>昍</b>指出“这种内耗对生活没有实质影响，真正要关注的是自己为什么无意义内耗”。<br>2. 把“别人怎么看我”置于“我怎么看自己”之前，就会反复陷入进退两难。<br>3. 身体状态会影响心理韧性——<b>昍</b>建议“健康安全的前提下，多跑步，身体太弱了，很多事很难启动”。<br><br><b>三、解决方案与建议</b><br>1. 立刻行动：不想聊就折叠、屏蔽、删除聊天记录，减少视觉干扰。<br>2. 重新定义：把“我必须合群”换成“我先照顾好自己”。热心网友们的共识是“硬融很难的”。<br>3. 就医与自我关怀：如果长期内耗、睡眠差，应去专业医院就诊，遵医嘱，不要硬扛。<br>4. 把精力投入具体的事：抄写、运动、复盘，建立“行动—反馈”的正循环，慢慢走出精神沼泽。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1087,28 +1128,27 @@
 
                     <div class="mt-5 pt-4 border-t border-gray-200">
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">人际关系</span>
-                            <span class="tag-item">群聊</span>
-                            <span class="tag-item">内耗</span>
-                            <span class="tag-item">主体性</span>
+                            <span class="tag-item">情绪内耗</span>
+                            <span class="tag-item">职场心理</span>
+                            <span class="tag-item">行动力</span>
+                            <span class="tag-item">边界感</span>
                         </div>
                     </div>
                 </div>
-                <!-- 问答卡片 2 结束 -->
 
-                <!-- 问答卡片 3：账号权限 开始 -->
+                <!-- 问答卡片 3 -->
                 <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]"> 
                     <div class="mb-4">
                         <h4 class="text-xl font-semibold text-black flex items-center">
                             <i class="fas fa-question-circle mr-2.5 text-[#4D6BFE] text-lg"></i>
-                            提问：职场中如何保护个人账号权限，避免隐私泄露风险？
+                            提问：怎样让大模型“说人话”，而不是一股AI味？
                         </h4>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            猫猫🌟："+1觉得可以先借别人账号做这个事儿，后来我和别人试了，发现账号换手机登陆没那么容易"
+                            润和：“可能确实如此……长久下来，有可能就有一股很浓的AI味”
                         </p>
                     </div>
 
@@ -1120,7 +1160,7 @@
                         <div class="text-gray-700 text-base leading-relaxed prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、问题背景</b><br>猫猫🌟在工作中需要联系用户，但自己的认证账号尚未申请下来。同事建议"先借别人账号"，或"用自己手机直接给用户打电话"，这两种方案都让她感到不安。<br><br><b>二、核心原因分析</b><br>1. <b>账号即身份</b>：在职场系统中，账号的所有操作都会被追溯到个人。一旦出现违规或纠纷，账号主人首先被追责。<br>2. <b>个人隐私暴露</b>：用自己手机打电话，相当于将个人号码暴露给用户，离职后仍可能被骚扰。<br>3. <b>合规风险</b>：账号权限申请流程的存在，本就是为了确保操作可追溯、信息可管控。<br><br><b>三、解决方案与建议</b><br>1. <b>坚持走正规流程</b>：等待自己的认证账号审批通过，不图一时方便。<br>2. <b>拒绝"借账号"方案</b>：即使同事愿意借，也要明确拒绝，避免操作记录混淆。<br>3. <b>用规则保护自己</b>：可以告知同事，安全规定禁止使用非本人账号操作，这是最正当的拒绝理由。<br>4. <b>离职清痕</b>：使用自己的账号，离职后信息可被注销清除，避免留下隐私隐患。
+                                    <b>一、问题背景</b><br>群友发现“长期使用AI后，自己说话都带AI味”，即便手写的文字也充满了空洞的书面腔。<br><br><b>二、核心原因分析</b><br>1. AI的语料来自大量“标准文本”，带有明显的模式化特征（比如“你的看法我特别认同”“这让我陷入了沉思”）。<br>2. 用户长期与AI对话，会无意间模仿其表达方式，出现“AI腌入味”。<br>3. 直接用AI初稿，缺少个人经历与感官细节，自然无法打动人。<br><br><b>三、解决方案与建议</b><br>1. 把AI当“工具人”，不当“代笔人”：<b>AI写框架，自己填肉</b>。<br>2. 增加具体的画面描写：动作、环境、五感细节，让读者“看见”故事。<br>3. 控制引号使用：取消大段的排比和“先总后分”结构，用口语化的短句。<br>4. 关键时刻“关掉AI”，完全手写一遍——找回自己的语感。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1132,14 +1172,13 @@
 
                     <div class="mt-5 pt-4 border-t border-gray-200">
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">账号安全</span>
-                            <span class="tag-item">职场规范</span>
-                            <span class="tag-item">隐私保护</span>
-                            <span class="tag-item">合规意识</span>
+                            <span class="tag-item">AI写作</span>
+                            <span class="tag-item">表达力</span>
+                            <span class="tag-item">去AI味</span>
+                            <span class="tag-item">写作技巧</span>
                         </div>
                     </div>
                 </div>
-                <!-- 问答卡片 3 结束 -->
 
             </div>
         </section>
@@ -1150,23 +1189,23 @@
             </h2>
             <div class="space-y-8">
 
-                <!-- 知识卡片：手写记账 开始 -->
+                <!-- 分享卡片 1 -->
                 <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
                     <h4 class="text-xl font-semibold text-black mb-3">
-                        手写记账法：用实体账本把开销砍掉一半
+                        《裂周》：用历史解构管理，理解组织的本质
                     </h4>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            咖喱多："最近用实体账本记账半个月，上个月的开销环比-50%"
+                            昍：“《裂周》这本书有点意思，作者提到，青铜器只需要加热到800度就能生产”
                         </p>
                     </div>
 
                     <div class="text-gray-700 text-base mb-4 leading-relaxed prose prose-sm max-w-none">
                         <div class="expandable-content" data-char-limit="200">
                             <div class="content-preview">
-                                <b>一、推荐内容</b><br>咖喱多老师分享了一套极其简单却效果惊人的省钱方法：在入户位置放一本实体账本，每天回家第一件事就是手动记账。半个月实践下来，上月开销环比下降50%。<br><br><b>二、核心价值与特点</b><br>1. <b>支付前自动思考</b>：手写记账让每一笔消费都"过脑子"，冲动消费大幅减少。<br>2. <b>体感更强</b>：比起APP自动记账，手写更能建立对金钱的"实感"，尤其适合无现金支付时代。<br>3. <b>操作极简</b>：黑笔记时间金额项目、蓝笔记每日总额、红笔定期复盘，三支笔即可启动。<br><br><b>三、适用场景</b><br>适合所有希望在消费降级时代重新掌握财务主动权的人。对内容创作者而言，清晰的财务规划也是稳定创作的基石。
+                                <b>一、推荐内容</b><br><b>昍</b>在夜读时发现好书《裂周》，并分享了两则令人耳目一新的历史洞见。<br><br><b>二、核心价值与特点</b><br>1. 用<b>唯物史观</b>解释文明性格：青铜器生产依赖多金属贸易，因此青铜文明更开放；铁器原料普及，所以铁器文明更封闭、更倾向于“上来就砍”。<br>2. 用<b>政治演化</b>解释制度设计：周穆王、周恭王时期，王权受限，于是“卿事寮”=政府、“王家”=总统、“太史寮”=法，形成了事实上的三权分立格局。这为理解现代管理提供了古老坐标。<br><br><b>三、适用场景</b><br>适合所有对历史、组织行为、管理逻辑感兴趣的人。可作为睡前深度阅读或通勤路上的思想体操。
                             </div>
                             <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                 <span class="expand-text">展开全文</span>
@@ -1175,31 +1214,30 @@
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tag-item">省钱</span>
-                        <span class="tag-item">记账</span>
-                        <span class="tag-item">财务规划</span>
-                        <span class="tag-item">习惯养成</span>
+                        <span class="tag-item">历史</span>
+                        <span class="tag-item">管理</span>
+                        <span class="tag-item">组织行为</span>
+                        <span class="tag-item">好书分享</span>
                     </div>
                 </div>
-                <!-- 知识卡片结束 -->
 
-                <!-- 知识卡片：AI播客转录 开始 -->
+                <!-- 分享卡片 2 -->
                 <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
                     <h4 class="text-xl font-semibold text-black mb-3">
-                        AI工具流：播客音频一键转录成文字稿
+                        通义千问音视频速读：一键转写播客，效率拉满
                     </h4>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            AA昍："这种免费播客，如何自动转录成文档？"
+                            狗狗蹲马桶：“可以用猫抓插件，然后传到通义千问的音视频速读”
                         </p>
                     </div>
 
                     <div class="text-gray-700 text-base mb-4 leading-relaxed prose prose-sm max-w-none">
                         <div class="expandable-content" data-char-limit="200">
                             <div class="content-preview">
-                                <b>一、推荐内容</b><br>狗狗蹲马桶老师针对"如何将播客转为文字稿"的提问，分享了一套完全免费的高效工具流，打通了从音频获取到文字处理的链路。<br><br><b>二、核心价值与特点</b><br>1. <b>第一步：猫抓插件</b> —— Edge、Chrome浏览器均可安装，在网页中直接抓取播客音频文件。<br>2. <b>第二步：通义千问"音视频速读"</b> —— 上传音频即可快速转录为文字，还能智能总结、提炼要点；免费额度比飞书更充裕。<br>3. <b>效率极高</b>：整个链路免费、零门槛、可批量处理。<br><br><b>三、适用场景</b><br>不仅适用于播客学习，还可用于会议录音、采访素材、线上课程等所有音频内容的信息化处理，是内容创作者和高强度信息输入者的效率利器。
+                                <b>一、推荐内容</b><br>针对“免费播客如何自动转录成文档”，<b>狗狗蹲马桶</b>现场演示了一套完整工作流。<br><br><b>二、核心价值与特点</b><br>1. 使用<b>猫抓插件</b>（Edge/Chrome均可）一键下载网页音视频。<br>2. 上传到<b>通义千问-音视频速读</b>，自动完成语音转文字+智能总结。相比飞书，免费额度更高。<br>3. 特别适合处理“播客、会议录音、网课、采访”等长音频，大幅节省信息处理时间。<br><br><b>三、适用场景</b><br>内容创作者、学习者、经常需要整理录音的职场人士。
                             </div>
                             <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                 <span class="expand-text">展开全文</span>
@@ -1207,32 +1245,31 @@
                             </button>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tag-item">效率工具</span>
-                        <span class="tag-item">AI应用</span>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-item">AI效率</span>
                         <span class="tag-item">播客转录</span>
-                        <span class="tag-item">信息处理</span>
+                        <span class="tag-item">通义千问</span>
+                        <span class="tag-item">工具推荐</span>
                     </div>
                 </div>
-                <!-- 知识卡片结束 -->
 
-                <!-- 知识卡片：微信账单导出 开始 -->
+                <!-- 分享卡片 3 -->
                 <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
                     <h4 class="text-xl font-semibold text-black mb-3">
-                        微信账单导出全路径：解决记账APP自动记账失效问题
+                        手写记账法：让每一笔钱都有体感
                     </h4>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            黄云："我 → 服务 → 钱包 → 右上角【账单】→ 右上角 …（更多）/常见问题 → 下载账单"
+                            咖喱多：“最近用实体账本记账半个月，上个月的开销环比-50%”
                         </p>
                     </div>
 
                     <div class="text-gray-700 text-base mb-4 leading-relaxed prose prose-sm max-w-none">
                         <div class="expandable-content" data-char-limit="200">
                             <div class="content-preview">
-                                <b>一、推荐内容</b><br>今天学习了吗健身了吗读书了吗老师反映手机AI记账无法自动记录微信支出。黄云老师给出了微信官方账单导出的完整路径，解决这一痛点。<br><br><b>二、核心价值与特点</b><br>1. <b>官方路径</b>：通过"我-服务-钱包-账单-更多-下载账单"即可导出完整的微信交易记录。<br>2. <b>原因揭示</b>：微信因隐私限制，禁止第三方APP自动读取账单数据，这是"AI记账失效"的根源。<br>3. <b>后续处理</b>：导出账单文件后，可手动导入手机自带AI记账或财务软件，实现完整的记账闭环。<br><br><b>三、适用场景</b><br>适合所有使用手机记账、但对微信支出自动同步失效的用户。特别是有财务复盘习惯的职场人，可结合手写账本形成"电子+手写"双保险。
+                                <b>一、推荐内容</b><br><b>咖喱多</b>分享了自己的“实体账本记账法”，并说“一个小小的动作对省钱习惯的改善超有效”。<br><br><b>二、核心价值与特点</b><br>1. 收支只在支付宝/微信，到家第一件事手写记账。<br>2. 黑笔记时间金额项目，蓝笔记每日总额，红笔复盘标重点。<br>3. 手写比App更快、更有“体感”，能直观感受到钱流出去的真实感——比电子记账更能抑制冲动消费。<br><br><b>三、适用场景</b><br>月光族、想优化消费习惯、喜欢用纸笔整理思绪的人群。
                             </div>
                             <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                 <span class="expand-text">展开全文</span>
@@ -1241,17 +1278,17 @@
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2">
-                        <span class="tag-item">微信</span>
-                        <span class="tag-item">账单导出</span>
-                        <span class="tag-item">记账工具</span>
-                        <span class="tag-item">效率技巧</span>
+                        <span class="tag-item">理财习惯</span>
+                        <span class="tag-item">手写记账</span>
+                        <span class="tag-item">消费降级</span>
+                        <span class="tag-item">省钱妙招</span>
                     </div>
                 </div>
-                <!-- 知识卡片结束 -->
 
             </div>
         </section>
 
+        <!-- 底部日期导航 -->
         <nav class="w-full mt-12" aria-label="日期导航（底部）">
             <div class="bento-card p-5">
                 <div class="flex items-center justify-between mb-4">
@@ -1275,11 +1312,11 @@
                     <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-base">
                         <div class="flex items-center">
                             <i class="fas fa-database mr-2 text-[#4D6BFE]"></i>
-                            <span>微信群聊记录 - 新茧群</span>
+                            <span>微信群聊记录 - 新茧</span>
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-robot mr-2 text-[#4D6BFE]"></i>
-                            <span>报告生成于 2026-08-28 23:59:59</span>
+                            <span>报告生成于 2026-08-28 12:00:00</span>
                         </div>
                     </div>
                     <p class="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
@@ -1290,6 +1327,7 @@
         </footer>
     </div>
 
+    <!-- 页面右下角悬浮按钮集 -->
     <div class="floating-action-stack" aria-label="页面快捷操作">
         <div class="toc-floating-container" aria-label="内容导航">
             <button id="toc-toggle" class="toc-floating-button" onclick="toggleToc(event)" aria-label="打开目录" aria-expanded="false" title="内容导航">
@@ -1334,18 +1372,15 @@
     </div>
 
     <script>
-        const GJ_BASE_URL = 'https://gaogaoselfmedialearninggroup.github.io/x';
-        const GJ_DIR = window.location.pathname.includes('gaos_daily_report/') ? 'gaos_daily_report/' : '';
-        const GJ_FILE_PREFIX = 'daily_report_';
+        const GJ_BASE_URL = 'https://missniannian.github.io/daydayup';
+        const GJ_FILE_PREFIX = '日日职高日报_';
         const GJ_SUFFIX = '.html';
-        const GJ_LOCAL_MIN = '2026-08-28';
-        const GJ_LOCAL_MAX = '2026-09-03';
 
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
         window.scrollTo(0, 0);
-        
+
         document.addEventListener('DOMContentLoaded', function() {
             initBackToTop();
             initThemeToggle();
@@ -1355,16 +1390,20 @@
             numberElements.forEach(element => {
                 const finalValueText = element.textContent.replace(/,/g, '');
                 const finalValue = parseInt(finalValueText, 10);
+
                 if (isNaN(finalValue)) return;
+
                 let currentValue = 0;
                 const duration = 1500;
                 const frameRate = 1000 / 60;
                 const totalFrames = Math.round(duration / frameRate);
                 const increment = finalValue / totalFrames;
+
                 let currentFrame = 0;
                 const timer = setInterval(() => {
                     currentFrame++;
                     currentValue += increment;
+
                     if (currentFrame >= totalFrames) {
                         currentValue = finalValue;
                         clearInterval(timer);
@@ -1385,40 +1424,55 @@
         function initDailyNavigation() {
             const currentDateStr = getCurrentDateFromPage();
             if (!currentDateStr) return;
+
             const dt = new Date(currentDateStr);
             const prev = new Date(dt); prev.setDate(prev.getDate() - 1);
             const next = new Date(dt); next.setDate(next.getDate() + 1);
+
             const prevStr = formatDate(prev);
             const nextStr = formatDate(next);
+
             const prevButtons = ['prev-day', 'prev-day-bottom']
                 .map(id => document.getElementById(id))
                 .filter(Boolean);
             const nextButtons = ['next-day', 'next-day-bottom']
                 .map(id => document.getElementById(id))
                 .filter(Boolean);
-            if (!prevButtons.length && !nextButtons.length) return;
+
+            if (!prevButtons.length && !nextButtons.length) {
+                return;
+            }
+
             const updateButtons = (buttons, enabled, handler) => {
                 buttons.forEach(btn => {
                     btn.disabled = !enabled;
                     btn.onclick = enabled ? handler : null;
                 });
             };
+
             const isLocalFile = window.location.protocol === 'file:';
+            
             if (isLocalFile) {
                 const prevHandler = () => {
                     const [year, month] = prevStr.split('-');
-                    window.location.href = `../${month}/${GJ_FILE_PREFIX}${prevStr}${GJ_SUFFIX}`;
+                    window.location.href = `../${year}年${parseInt(month, 10)}月/${GJ_FILE_PREFIX}${prevStr}${GJ_SUFFIX}`;
                 };
                 const nextHandler = () => {
                     const [year, month] = nextStr.split('-');
-                    window.location.href = `../${month}/${GJ_FILE_PREFIX}${nextStr}${GJ_SUFFIX}`;
+                    window.location.href = `../${year}年${parseInt(month, 10)}月/${GJ_FILE_PREFIX}${nextStr}${GJ_SUFFIX}`;
                 };
-                if (prevButtons.length) updateButtons(prevButtons, true, prevHandler);
-                if (nextButtons.length) updateButtons(nextButtons, true, nextHandler);
+
+                if (prevButtons.length) {
+                    updateButtons(prevButtons, true, prevHandler);
+                }
+                if (nextButtons.length) {
+                    updateButtons(nextButtons, true, nextHandler);
+                }
             } else {
                 Promise.all([checkExists(prevStr), checkExists(nextStr)]).then(([pe, ne]) => {
                     const prevHandler = () => window.location.href = pe.url;
                     const nextHandler = () => window.location.href = ne.url;
+
                     updateButtons(prevButtons, !!pe.ok, prevHandler);
                     updateButtons(nextButtons, !!ne.ok, nextHandler);
                 }).catch(()=>{
@@ -1430,7 +1484,9 @@
 
         function checkExists(dateStr) {
             const [year, month] = dateStr.split('-');
-            const url = `${GJ_BASE_URL}/${year}/${month}/${GJ_FILE_PREFIX}${dateStr}${GJ_SUFFIX}`;
+            const monthNoPad = String(parseInt(month, 10));
+            const url = `${GJ_BASE_URL}/${year}年/${year}年${monthNoPad}月/${GJ_FILE_PREFIX}${dateStr}${GJ_SUFFIX}`;
+            
             return fetch(url, { method: 'HEAD', cache: 'no-store' })
                 .then(r => r.ok ? { ok: true, url: url } : 
                     fetch(url, { method: 'GET', cache: 'no-store' })
@@ -1450,7 +1506,7 @@
                 const m = el.textContent.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
                 if (m) return `${m[1]}-${pad2(m[2])}-${pad2(m[3])}`;
             }
-            const fn = window.location.pathname.match(/daily_report_(\d{4}-\d{2}-\d{2})\.html/);
+            const fn = window.location.pathname.match(/日日职高日报_(\d{4}-\d{2}-\d{2})\.html/);
             if (fn) return fn[1];
             const tm = document.title.match(/(\d{4}-\d{2}-\d{2})/);
             if (tm) return tm[1];
@@ -1472,6 +1528,7 @@
             const panel = document.getElementById('toc-panel');
             const button = document.getElementById('toc-toggle');
             if (!panel || !button) return;
+
             if (panel.classList.contains('active')) {
                 closeTocPanel();
             } else {
@@ -1489,6 +1546,7 @@
             const panel = document.getElementById('toc-panel');
             const button = document.getElementById('toc-toggle');
             if (!panel || !button) return;
+
             panel.classList.remove('active');
             panel.setAttribute('aria-hidden', 'true');
             button.classList.remove('active');
@@ -1500,11 +1558,12 @@
             const panel = document.getElementById('toc-panel');
             const button = document.getElementById('toc-toggle');
             if (!panel || !button) return;
+
             if (!panel.contains(event.target) && !button.contains(event.target)) {
                 closeTocPanel();
             }
         }
-
+        
         function smoothScroll(event, targetId) {
             event.preventDefault();
             const target = document.getElementById(targetId);
@@ -1515,9 +1574,10 @@
                 closeTocPanel();
             }
         }
-
+        
         function initBackToTop() {
             const btn = document.getElementById('backToTop');
+            
             window.addEventListener('scroll', () => {
                 if (window.pageYOffset > 300) {
                     btn.classList.add('visible');
@@ -1525,24 +1585,29 @@
                     btn.classList.remove('visible');
                 }
             });
+            
             btn.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         }
-
+        
         function initThemeToggle() {
             const btn = document.getElementById('themeToggle');
             const icon = document.getElementById('themeIcon');
+            
             document.documentElement.classList.remove('dark-mode-preload');
+            
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
             }
+            
             btn.addEventListener('click', () => {
                 document.body.classList.toggle('dark-mode');
                 const isDark = document.body.classList.contains('dark-mode');
+                
                 if (isDark) {
                     icon.classList.remove('fa-moon');
                     icon.classList.add('fa-sun');
@@ -1554,12 +1619,14 @@
                 }
             });
         }
-
+        
         function initTocHighlight() {
             const sections = ['section-overview', 'section-topics', 'section-qa', 'section-highlights'];
             const tocLinks = document.querySelectorAll('.toc-link');
+            
             window.addEventListener('scroll', () => {
                 let current = '';
+                
                 sections.forEach(sectionId => {
                     const section = document.getElementById(sectionId);
                     if (section) {
@@ -1570,6 +1637,7 @@
                         }
                     }
                 });
+                
                 tocLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === '#' + current) {
@@ -1578,13 +1646,15 @@
                 });
             });
         }
-
+        
         function copyQuote(button, text) {
             navigator.clipboard.writeText(text).then(() => {
                 const icon = button.querySelector('i');
                 const originalClass = icon.className;
+                
                 button.classList.add('copied');
                 icon.className = 'fas fa-check';
+                
                 setTimeout(() => {
                     button.classList.remove('copied');
                     icon.className = originalClass;
@@ -1594,33 +1664,42 @@
                 alert('复制失败，请手动复制');
             });
         }
-
+        
         function initExpandableContent() {
             const expandableContents = document.querySelectorAll('.expandable-content');
+            
             expandableContents.forEach(container => {
                 const charLimit = parseInt(container.getAttribute('data-char-limit')) || 200;
                 const contentPreview = container.querySelector('.content-preview');
                 const expandBtn = container.querySelector('.expand-btn');
+                
                 if (!contentPreview || !expandBtn) return;
+                
                 const fullContent = contentPreview.innerHTML;
                 const fullText = contentPreview.textContent || contentPreview.innerText;
+                
                 if (fullText.length > charLimit) {
                     const tempDiv = document.createElement('div');
                     tempDiv.innerHTML = fullContent;
+                    
                     const truncatedText = fullText.substring(0, charLimit);
+                    
                     let truncatedContent = '';
                     let charCount = 0;
+                    
                     const walker = document.createTreeWalker(
                         tempDiv,
                         NodeFilter.SHOW_TEXT,
                         null,
                         false
                     );
+                    
                     let node;
                     const textNodes = [];
                     while (node = walker.nextNode()) {
                         textNodes.push(node);
                     }
+                    
                     for (let textNode of textNodes) {
                         const text = textNode.textContent;
                         if (charCount + text.length <= charLimit) {
@@ -1629,6 +1708,7 @@
                             const remainingChars = charLimit - charCount;
                             textNode.textContent = text.substring(0, remainingChars) + '...';
                             charCount = charLimit;
+                            
                             let currentNodeToClearAfter = textNode;
                             while (currentNodeToClearAfter && currentNodeToClearAfter !== tempDiv) {
                                 let sibling = currentNodeToClearAfter.nextSibling;
@@ -1642,12 +1722,16 @@
                             break;
                         }
                     }
+                    
                     const previewContent = tempDiv.innerHTML;
+                    
                     contentPreview.innerHTML = previewContent;
                     contentPreview.classList.add('collapsed');
                     expandBtn.style.display = 'flex';
+                    
                     expandBtn.addEventListener('click', function() {
                         const isExpanded = expandBtn.classList.contains('expanded');
+                        
                         if (isExpanded) {
                             contentPreview.innerHTML = previewContent;
                             contentPreview.classList.add('collapsed');
