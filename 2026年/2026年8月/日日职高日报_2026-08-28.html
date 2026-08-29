@@ -1,874 +1,642 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>日日职高 | 2026.08.29</title>
-    <style>
-        :root {
-            --bg: #f0f4f9;
-            --card: #ffffff;
-            --text: #1f2937;
-            --primary: #1e40af;
-            --primary-light: #eff6ff;
-            --border: #e5e7eb;
-            --muted: #6b7280;
-            --quote-bg: #f8fafc;
-            --tag-bg: #e0e7ff;
-            --tag-text: #3730a3;
-            --danger-bg: #fee2e2;
-            --danger-text: #b91c1c;
-        }
-        [data-theme="dark"] {
-            --bg: #111827;
-            --card: #1f2937;
-            --text: #e5e7eb;
-            --primary: #60a5fa;
-            --primary-light: #1e3a5f;
-            --border: #374151;
-            --muted: #9ca3af;
-            --quote-bg: #111827;
-            --tag-bg: #312e81;
-            --tag-text: #c7d2fe;
-            --danger-bg: #451a1a;
-            --danger-text: #fca5a5;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-            line-height: 1.7;
-            padding-bottom: 60px;
-            transition: background 0.3s, color 0.3s;
-        }
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日日职高 · 2026.08.29</title>
+<style>
+  :root {
+    --bg: #f4f5fb;
+    --card: #ffffff;
+    --text: #1f2330;
+    --muted: #6e7687;
+    --accent: #4f46e5;
+    --border: #e6e8f0;
+    --shadow: 0 2px 12px rgba(31, 35, 48, 0.06);
+    --code-bg: #f0f1f7;
+  }
 
-        /* ===== Header ===== */
-        header {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: #fff;
-            padding: 28px 0 20px;
-            text-align: center;
-            margin-bottom: 24px;
-            position: relative;
-        }
-        .header-logo {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo-text {
-            font-size: 18px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            opacity: 0.9;
-        }
-        #darkModeToggle {
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            border-radius: 50%;
-            color: #fff;
-            font-size: 18px;
-            width: 36px;
-            height: 36px;
-            cursor: pointer;
-            transition: background 0.3s;
-            line-height: 1;
-        }
-        #darkModeToggle:hover {
-            background: rgba(255, 255, 255, 0.35);
-        }
-        .header-title {
-            max-width: 720px;
-            margin: 12px auto 0;
-            padding: 0 16px;
-        }
-        .header-title h1 {
-            font-size: 38px;
-            font-weight: 900;
-            letter-spacing: 10px;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-        }
-        .header-title .date {
-            font-size: 14px;
-            opacity: 0.92;
-            margin-top: 2px;
-        }
-        .header-title .subtitle {
-            font-size: 13px;
-            opacity: 0.8;
-            margin-top: 2px;
-        }
-        .header-nav {
-            max-width: 720px;
-            margin: 18px auto 0;
-            padding: 0 16px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .nav-btn {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            color: #fff;
-            text-decoration: none;
-            font-size: 13px;
-            padding: 5px 16px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            transition: background 0.3s;
-            cursor: pointer;
-        }
-        .nav-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
+  html[data-theme="dark"] {
+    --bg: #0d1220;
+    --card: #161d2e;
+    --text: #eef0f6;
+    --muted: #99a1b5;
+    --accent: #818cf8;
+    --border: #283044;
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    --code-bg: #1f2637;
+  }
 
-        /* ===== Sidebar ===== */
-        .sidebar-nav {
-            position: fixed;
-            right: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 140px;
-            background: var(--card);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            padding: 10px 0;
-            z-index: 100;
-            border: 1px solid var(--border);
-            transition: background 0.3s, border-color 0.3s;
-        }
-        .sidebar-nav .sidebar-title {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--muted);
-            text-align: center;
-            padding-bottom: 6px;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 6px;
-            letter-spacing: 4px;
-        }
-        .sidebar-nav a {
-            display: block;
-            padding: 6px 14px;
-            font-size: 12px;
-            color: var(--text);
-            text-decoration: none;
-            transition: background 0.2s;
-            border-left: 3px solid transparent;
-        }
-        .sidebar-nav a:hover,
-        .sidebar-nav a.active {
-            background: var(--primary-light);
-            border-left-color: var(--primary);
-            color: var(--primary);
-        }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-        /* ===== Cards ===== */
-        .section-card {
-            background: var(--card);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-            border: 1px solid var(--border);
-            transition: background 0.3s, border-color 0.3s;
-            scroll-margin-top: 16px;
-        }
-        .section-title {
-            font-size: 20px;
-            font-weight: 800;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--primary);
-        }
-        .section-title .icon {
-            font-size: 22px;
-        }
-        .section-title::after {
-            content: '';
-            flex: 1;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary), transparent);
-            border-radius: 2px;
-        }
+  html {
+    scroll-behavior: smooth;
+  }
 
-        /* ===== 速览 ===== */
-        .speed-list {
-            list-style: none;
-        }
-        .speed-list li {
-            padding: 10px 0;
-            border-bottom: 1px dashed var(--border);
-            font-size: 14px;
-            line-height: 1.8;
-        }
-        .speed-list li:last-child {
-            border-bottom: none;
-        }
-        .speed-list li .emoji {
-            margin-right: 4px;
-        }
-        .speed-list li .hl {
-            color: var(--primary);
-            font-weight: 600;
-        }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    transition: background 0.3s, color 0.3s;
+  }
 
-        /* ===== Quote ===== */
-        .quote-block {
-            background: var(--primary-light);
-            border-left: 4px solid var(--primary);
-            padding: 14px 42px 14px 16px;
-            border-radius: 0 10px 10px 0;
-            margin: 14px 0;
-            position: relative;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-        .quote-block .copy-btn {
-            position: absolute;
-            top: 8px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.06);
-            border: none;
-            border-radius: 4px;
-            font-size: 12px;
-            padding: 2px 8px;
-            cursor: pointer;
-            color: var(--muted);
-            opacity: 0;
-            transition: opacity 0.2s, background 0.2s;
-        }
-        .quote-block:hover .copy-btn {
-            opacity: 1;
-        }
-        .quote-block .copy-btn:hover {
-            background: rgba(0, 0, 0, 0.12);
-        }
-        .quote-block .attr {
-            display: block;
-            margin-top: 6px;
-            font-size: 12px;
-            color: var(--muted);
-            text-align: right;
-        }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
 
-        /* ===== 深度 ===== */
-        .topic-label {
-            display: inline-block;
-            background: var(--tag-bg);
-            color: var(--tag-text);
-            font-size: 12px;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-        }
-        .deep-topic h3 {
-            font-size: 18px;
-            font-weight: 800;
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-        .deep-topic p {
-            font-size: 14px;
-            line-height: 1.8;
-            margin-bottom: 10px;
-        }
-        .deep-topic .sub-point {
-            padding-left: 16px;
-            border-left: 2px solid var(--border);
-            margin: 12px 0;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-        .deep-topic .sub-point .who {
-            font-weight: 600;
-            color: var(--primary);
-        }
-        .insight-box {
-            background: linear-gradient(135deg, var(--primary-light), transparent);
-            padding: 16px 18px;
-            border-radius: 12px;
-            margin-top: 16px;
-            font-size: 14px;
-            line-height: 1.8;
-            border: 1px solid var(--border);
-        }
-        .insight-box .insight-title {
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 4px;
-            font-size: 15px;
-        }
+  a:hover {
+    opacity: 0.85;
+  }
 
-        /* ===== QA ===== */
-        .qa-item {
-            margin-bottom: 20px;
-        }
-        .qa-item:last-child {
-            margin-bottom: 0;
-        }
-        .qa-question {
-            font-weight: 700;
-            font-size: 15px;
-            padding: 12px 16px;
-            background: var(--primary-light);
-            border-radius: 12px 12px 0 0;
-            border-left: 4px solid var(--primary);
-            line-height: 1.5;
-        }
-        .qa-body {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-top: none;
-            border-radius: 0 0 12px 12px;
-            padding: 16px;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-        .qa-body .story {
-            color: var(--muted);
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
-        .qa-body .analysis {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed var(--border);
-        }
-        .qa-body .tag {
-            display: inline-block;
-            background: var(--danger-bg);
-            color: var(--danger-text);
-            font-size: 11px;
-            font-weight: 600;
-            padding: 2px 8px;
-            border-radius: 10px;
-            margin-right: 6px;
-        }
+  /* ===== Top Bar ===== */
+  .top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(8px);
+  }
 
-        /* ===== 宝藏 ===== */
-        .treasure-item {
-            padding: 16px 18px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            margin-bottom: 16px;
-            transition: box-shadow 0.2s;
-            background: var(--card);
-        }
-        .treasure-item:hover {
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-        }
-        .treasure-title {
-            font-weight: 700;
-            font-size: 15px;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .treasure-content {
-            font-size: 14px;
-            line-height: 1.8;
-        }
-        .brand-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin: 8px 0;
-        }
-        .brand-list .btag {
-            background: var(--tag-bg);
-            color: var(--tag-text);
-            font-size: 12px;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-weight: 500;
-        }
-        .tier-label {
-            font-weight: 700;
-            font-size: 13px;
-            color: var(--muted);
-            margin: 8px 0 4px;
-        }
-        .tier-label:first-child {
-            margin-top: 0;
-        }
+  .top-bar-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
 
-        /* ===== Footer ===== */
-        footer {
-            text-align: center;
-            padding: 40px 16px 20px;
-            border-top: 1px solid var(--border);
-            margin-top: 40px;
-        }
-        .footer-slogan {
-            font-size: 14px;
-            color: var(--muted);
-            letter-spacing: 6px;
-            margin-bottom: 16px;
-        }
-        .footer-nav {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        .footer-nav .nav-btn {
-            background: var(--primary);
-            color: #fff;
-            border: 1px solid transparent;
-        }
-        .footer-nav .nav-btn:hover {
-            opacity: 0.85;
-            background: var(--primary);
-        }
-        .footer-link {
-            font-size: 12px;
-            color: var(--muted);
-            text-decoration: none;
-            border-bottom: 1px dashed var(--muted);
-            padding-bottom: 2px;
-            margin: 0 6px;
-        }
-        .footer-link:hover {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
-        }
+  .brand {
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--accent);
+    letter-spacing: 1px;
+  }
 
-        /* ===== Back to top ===== */
-        #backToTop {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: var(--primary);
-            color: #fff;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s, opacity 0.3s;
-        }
-        #backToTop:hover {
-            transform: translateY(-3px);
-        }
-        #backToTop.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
 
-        /* ===== Toast ===== */
-        .toast {
-            position: fixed;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 13px;
-            z-index: 999;
-            transition: transform 0.3s;
-            pointer-events: none;
-            white-space: nowrap;
-        }
-        .toast.show {
-            transform: translateX(-50%) translateY(0);
-        }
+  .nav .btn {
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
 
-        /* ===== Responsive ===== */
-        @media (max-width: 860px) {
-            .sidebar-nav {
-                display: none;
-            }
-        }
-        @media (max-width: 600px) {
-            .header-title h1 {
-                font-size: 28px;
-                letter-spacing: 6px;
-            }
-            .section-card {
-                padding: 16px;
-            }
-            .header-nav {
-                gap: 8px;
-            }
-            .nav-btn {
-                font-size: 12px;
-                padding: 4px 10px;
-            }
-        }
-    </style>
+  .nav .btn:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  .nav .btn.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .nav .btn-icon {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  /* ===== Hero ===== */
+  .hero {
+    text-align: center;
+    padding: 52px 20px 32px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    background: linear-gradient(135deg, var(--accent), #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero .date {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--muted);
+    letter-spacing: 2px;
+  }
+
+  .hero .keywords {
+    margin-top: 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero .kw {
+    background: var(--accent);
+    color: #fff;
+    font-size: 13px;
+    padding: 4px 14px;
+    border-radius: 999px;
+    opacity: 0.9;
+  }
+
+  /* ===== Sidebar Nav ===== */
+  .sidebar {
+    position: fixed;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.2s;
+  }
+
+  .sidebar a:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  /* ===== Main Container ===== */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 32px 32px 24px;
+    margin-bottom: 28px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 16px;
+    font-weight: 900;
+  }
+
+  .card h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 5px;
+    border-radius: 4px;
+    background: var(--accent);
+  }
+
+  .card .subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .card ul {
+    list-style: none;
+  }
+
+  .card ul li {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border);
+    font-size: 15px;
+  }
+
+  .card ul li:last-child {
+    border-bottom: none;
+  }
+
+  .card ul li strong {
+    color: var(--accent);
+  }
+
+  .highlight {
+    background: var(--code-bg);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 16px 0;
+    font-size: 15px;
+    position: relative;
+    border-left: 4px solid var(--accent);
+  }
+
+  .highlight .quote-source {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  .copy-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 12px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 4px 12px;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  .copy-btn:hover {
+    opacity: 1;
+  }
+
+  .qa-item {
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  .qa-item:last-child {
+    border-bottom: none;
+  }
+
+  .qa-q {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .qa-q::before {
+    content: "Q · ";
+    color: var(--accent);
+  }
+
+  .qa-a {
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  .qa-a::before {
+    content: "A · ";
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .treasure-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .treasure-item {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+
+  .treasure-item h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .treasure-item p {
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .tag {
+    font-size: 12px;
+    background: var(--accent);
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 999px;
+  }
+
+  /* ===== Footer Nav ===== */
+  .footer-nav {
+    max-width: 860px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .footer-nav .nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* ===== Back to Top ===== */
+  #back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+
+  #back-to-top:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .sidebar {
+      display: none;
+    }
+
+    .card {
+      padding: 20px 18px;
+    }
+
+    .top-bar-inner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-nav .nav {
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  }
+</style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="header-logo">
-            <span class="logo-text">📕 日日职高</span>
-            <button id="darkModeToggle" title="深浅色切换">🌙</button>
-        </div>
-        <div class="header-title">
-            <h1>日日职高</h1>
-            <p class="date">2026年08月29日 · 星期六</p>
-            <p class="subtitle">📕 自媒体糕校（使命必达）｜职场与工作精选日报</p>
-        </div>
-        <div class="header-nav">
-            <a href="#" class="nav-btn">◀ 前一天</a>
-            <a href="#" class="nav-btn">📚 历史日报</a>
-            <a href="#" class="nav-btn">后一天 ▶</a>
-        </div>
-    </header>
+<!-- Top Nav -->
+<header class="top-bar">
+  <div class="top-bar-inner">
+    <div class="brand">日日职高</div>
+    <nav class="nav">
+      <a class="btn" href="daily-report-2026-08-28.html">← 上一天</a>
+      <a class="btn" href="daily-report-archive.html">历史日报</a>
+      <a class="btn disabled" href="#">下一天 →</a>
+      <button class="btn-icon" id="theme-toggle" title="深色模式切换">🌙</button>
+    </nav>
+  </div>
+</header>
 
-    <!-- Main -->
-    <div class="container">
+<!-- Hero -->
+<div class="hero">
+  <h1>日日职高</h1>
+  <div class="date">2026.08.29 星期六</div>
+  <div class="keywords">
+    <span class="kw">背调</span>
+    <span class="kw">千粉</span>
+    <span class="kw">护肤数据</span>
+    <span class="kw">商单</span>
+  </div>
+</div>
 
-        <!-- 模块一：速览 -->
-        <section class="section-card" id="section1">
-            <div class="section-title"><span class="icon">📋</span>一、今日群聊速览</div>
-            <ul class="speed-list">
-                <li>💼 凌晨·糕效率自曝「28岁就退休，从没上过几天班」，却写出让群友以为「职场老鸟」的内容，引发「真实经历 vs 专业感」大讨论。</li>
-                <li>🔍 背调话题刷屏：被查出诉讼却不敢承认，群友一针见血「和劈腿一样，不知道被抓到的是哪次」。</li>
-                <li>📊 糕效率连发两份行业数据：小红书护肤品牌搜索TOP20 + 全平台广告投放梯队，信息量拉满。</li>
-                <li>🚀 光年Ai项目招募千粉职场/AI数码博主，预算500元；别有所为成功破千粉，群内刷屏恭喜。</li>
-            </ul>
-        </section>
+<!-- Sidebar Nav -->
+<nav class="sidebar">
+  <a href="#overview" title="今日群聊速览">一</a>
+  <a href="#deep" title="职通时刻">二</a>
+  <a href="#qa" title="避坑指南">三</a>
+  <a href="#treasure" title="宝藏分享">四</a>
+</nav>
 
-        <!-- 模块二：深度 -->
-        <section class="section-card" id="section2">
-            <div class="section-title"><span class="icon">💡</span>二、职通时刻・深度话题</div>
-            <div class="deep-topic">
-                <span class="topic-label">今日话题</span>
-                <h3>没上过班的人，凭什么教你在职场做人？</h3>
+<!-- Main -->
+<main class="container">
 
-                <p>昨晚深夜，糕效率的一条自述让群友瞬间清醒——</p>
+  <!-- 一、今日群聊速览 -->
+  <section id="overview" class="card">
+    <h2>一、今日群聊速览</h2>
+    <div class="subtitle">快速捕捉今日群内高能瞬间</div>
+    <ul>
+      <li>🎉 <strong>别有所为</strong>小红书突破千粉！群友刷屏祝贺，<strong>@宝鹅</strong>提醒：「可以开通蒲公英商单了！」</li>
+      <li>🌙 凌晨瓜田：<strong>糕效率</strong>带大家围观「背调查出诉讼却不敢承认」热帖，群友从职场背调聊到人性，金句频出。</li>
+      <li>📊 <strong>糕效率</strong>输出小红书护肤品牌搜索热度参考，护肤赛道创作者直呼「谢谢糕」。</li>
+      <li>💼 群内商单/置换机会密集：<strong>光年AI</strong>项目、<strong>北京宠物医院</strong>体验置换等同步开放。</li>
+      <li>⏳ <strong>@宝鹅</strong>感慨：「不知不觉做自媒体已经快一年了，时间过得真快。」</li>
+    </ul>
+  </section>
 
-                <div class="quote-block">
-                    「我28岁就退休了（不是因为有钱，是傻逼），没有试过什么叫背调。所以我写职场困难重重，根本也没上过几天班。学到很多。」
-                    <span class="attr">—— 糕效率</span>
-                    <button class="copy-btn" data-copy="我28岁就退休了（不是因为有钱，是傻逼），没有试过什么叫背调。所以我写职场困难重重，根本也没上过几天班。学到很多。">复制</button>
-                </div>
+  <!-- 二、职通时刻・深度话题 -->
+  <section id="deep" class="card">
+    <h2>二、职通时刻・深度话题</h2>
+    <div class="subtitle">背调不查「你没做过的事」，只查「你敢不敢认」</div>
+    <p>凌晨，<strong>糕效率</strong>分享了一篇小红书热帖：一个博主被背调查出有诉讼记录，却不承认，发帖哭诉。评论区教做人，群友也展开讨论。</p>
 
-                <p>群友的第一反应是惊讶：</p>
-
-                <div class="sub-point">
-                    <span class="who">别有所为：</span>「啊？我居然会从你嘴里听到这种话，之前的印象还一直停留在，你没有驾照，但是能做汽车号。」
-                </div>
-                <div class="sub-point">
-                    <span class="who">Suerte：</span>「糕的专业性一直给我感觉是职场老鸟。」
-                </div>
-                <div class="sub-point">
-                    <span class="who">别有所为：</span>「糕老师写职场也写得很好看呀。」
-                </div>
-
-                <p>随后话题延伸到写作方法本身——别有所为引用「暴论、故事、分析」三层结构，蚂蚁窝则给出实操心得：</p>
-
-                <div class="quote-block">
-                    「封面和标题爆论，正文直接讲故事，结尾再来一点点总结。」
-                    <span class="attr">—— 蚂蚁窝</span>
-                    <button class="copy-btn" data-copy="封面和标题爆论，正文直接讲故事，结尾再来一点点总结。">复制</button>
-                </div>
-
-                <div class="insight-box">
-                    <div class="insight-title">📌 日日洞察</div>
-                    好的职场内容创作者，不一定是职场老鸟，而是掌握了「知识迁移」的能力——把别人的经历消化成自己的认知，再用结构化表达呈现出来。这或许是内容创作最底层的核心竞争力。
-                </div>
-            </div>
-        </section>
-
-        <!-- 模块三：避坑 -->
-        <section class="section-card" id="section3">
-            <div class="section-title"><span class="icon">⚠️</span>三、避坑指南・问答精选</div>
-
-            <div class="qa-item">
-                <div class="qa-question">Q1：背调发现对方有诉讼，为什么就是不敢承认？</div>
-                <div class="qa-body">
-                    <p class="story">事件：小红书一个帖子讲述某人被背调查出诉讼记录，却支支吾吾不说明情况，评论区直接炸锅。</p>
-                    <div class="analysis">
-                        <span class="tag">群友分析</span>
-                        <div class="quote-block" style="margin:10px 0 6px;">
-                            「就和劈腿一样，因为不知道被抓到的是哪次，所以不敢承认。」
-                            <span class="attr">—— AA昍</span>
-                            <button class="copy-btn" data-copy="就和劈腿一样，因为不知道被抓到的是哪次，所以不敢承认。">复制</button>
-                        </div>
-                        <div class="quote-block" style="margin:10px 0 6px;">
-                            「说话遮遮掩掩的人，不管是不是坏人，首先肯定是笨蛋，都能让人看出来遮遮掩掩，直接一票否决了。」
-                            <span class="attr">—— AA昍</span>
-                            <button class="copy-btn" data-copy="说话遮遮掩掩的人，不管是不是坏人，首先肯定是笨蛋，都能让人看出来遮遮掩掩，直接一票否决了。">复制</button>
-                        </div>
-                        <p style="font-size:13px; margin-top:8px;">💡 避坑启示：职场中遇到遮遮掩掩的人，一票否决是最省心、最高效的策略。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="qa-item">
-                <div class="qa-question">Q2：做自媒体博主，如何识别「危险粉丝」？</div>
-                <div class="qa-body">
-                    <p class="story">事件：有粉丝在评论区追问博主「你老婆长什么样」，甚至进群留言「终于进到二壮老师的后宫了」。群友立刻警觉，提醒博主注意风险。</p>
-                    <div class="analysis">
-                        <span class="tag">群友提醒</span>
-                        <p style="margin-top:6px;">「不要轻易回复美女头像的私信」「那种并不是在问关于ta自己的事，而是在问关于你的事的人，就不要回了」「在评论区替你维护的粉丝，也要小心」</p>
-                        <p style="margin-top:8px; font-size:13px;">💡 避坑启示：自媒体人是高危职业。头像、语气、提问角度，都是识别「精神病」的信号。别因为一时好玩，把自己搭进去。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 模块四：宝藏 -->
-        <section class="section-card" id="section4">
-            <div class="section-title"><span class="icon">🏆</span>四、宝藏分享・高能精选</div>
-
-            <!-- 宝藏1 -->
-            <div class="treasure-item">
-                <div class="treasure-title">🔥 小红书护肤品牌搜索热度 TOP20</div>
-                <div class="treasure-content">
-                    <p style="font-size:13px;color:var(--muted);margin-bottom:6px;">糕效率 利用AI梳理用户主动搜索量较高的护肤品牌，做护肤赛道的群友可多分享这些品牌相关内容。</p>
-                    <div class="tier-label">第一梯队（头部高搜索）</div>
-                    <div class="brand-list">
-                        <span class="btag">SK-II</span><span class="btag">海蓝之谜</span><span class="btag">兰蔻</span><span class="btag">雅诗兰黛</span><span class="btag">修丽可</span><span class="btag">珀莱雅</span><span class="btag">巴黎欧莱雅</span><span class="btag">OLAY玉兰油</span>
-                    </div>
-                    <div class="tier-label">第二梯队（中高端热门）</div>
-                    <div class="brand-list">
-                        <span class="btag">薇诺娜</span><span class="btag">理肤泉</span><span class="btag">科颜氏</span><span class="btag">娇韵诗</span><span class="btag">资生堂</span><span class="btag">谷雨</span><span class="btag">自然堂</span><span class="btag">赫莲娜</span>
-                    </div>
-                    <div class="tier-label">第三梯队（细分赛道）</div>
-                    <div class="brand-list">
-                        <span class="btag">可复美</span><span class="btag">溪木源</span><span class="btag">欧诗漫</span><span class="btag">城野医生</span>
-                    </div>
-                    <p style="font-size:13px;color:var(--muted);margin-top:8px;">📌 防晒品类中蜜丝婷、安热沙搜索量靠前；敏感肌赛道薇诺娜、理肤泉排名更高。</p>
-                </div>
-            </div>
-
-            <!-- 宝藏2 -->
-            <div class="treasure-item">
-                <div class="treasure-title">📈 全自媒体平台广告投放参考梯队</div>
-                <div class="treasure-content">
-                    <p style="font-size:13px;color:var(--muted);margin-bottom:6px;">糕效率 综合飞瓜、青眼、QuestMobile的第三方监测数据整理。</p>
-                    <div class="tier-label">第一梯队（全平台十亿级）</div>
-                    <div class="brand-list">
-                        <span class="btag">巴黎欧莱雅</span><span class="btag">韩束</span><span class="btag">雅诗兰黛</span>
-                    </div>
-                    <div class="tier-label">第二梯队（五到十亿级）</div>
-                    <div class="brand-list">
-                        <span class="btag">珀莱雅</span><span class="btag">兰蔻</span><span class="btag">谷雨</span><span class="btag">海蓝之谜</span><span class="btag">修丽可</span>
-                    </div>
-                    <div class="tier-label">第三梯队（细分/单平台高投放）</div>
-                    <div class="brand-list">
-                        <span class="btag">OLAY玉兰油</span><span class="btag">赫莲娜</span><span class="btag">自然堂</span><span class="btag">薇诺娜</span><span class="btag">蜜丝婷</span><span class="btag">SK-II</span><span class="btag">可复美</span>
-                    </div>
-                    <p style="font-size:13px;color:var(--muted);margin-top:8px;">📌 分平台差异明显：抖音TOP为韩束、欧莱雅、谷雨；小红书TOP为国际大牌+头部国货；视频号基本被谷雨、韩束、自然堂包揽。</p>
-                </div>
-            </div>
-
-            <!-- 宝藏3 -->
-            <div class="treasure-item">
-                <div class="treasure-title">🚀 商单机会｜光年Ai 项目招募</div>
-                <div class="treasure-content">
-                    <ul style="list-style:none; padding:0; font-size:14px; line-height:2;">
-                        <li>📱 平台：小红书</li>
-                        <li>🎯 类型：职场类 / AI数码类博主</li>
-                        <li>👥 粉丝要求：1000粉</li>
-                        <li>💰 预算：500元</li>
-                        <li>⏰ 报名截止：09/04 23:59</li>
-                    </ul>
-                    <p style="font-size:13px;color:var(--muted);margin-top:4px;">群友子蟹已第一时间报名，符合条件的群友抓紧。</p>
-                </div>
-            </div>
-
-            <!-- 宝藏4 -->
-            <div class="treasure-item">
-                <div class="treasure-title">📝 强烈建议用「项目管理思维」找工作</div>
-                <div class="treasure-content">
-                    <p>@宝鹅 分享的笔记，用项目管理拆解求职全流程：目标拆解 → 资源盘点（人脉/作品/简历）→ 进度管理（笔试/面试/反馈）→ 复盘迭代。</p>
-                    <p style="font-size:13px;color:var(--muted);margin-top:6px;">适合正在求职或想系统规划职业方向的群友。</p>
-                </div>
-            </div>
-
-            <!-- 宝藏5 -->
-            <div class="treasure-item">
-                <div class="treasure-title">🎉 千粉心得｜别有所为</div>
-                <div class="treasure-content">
-                    <div class="quote-block" style="margin:0 0 8px;">
-                        「涨粉靠爆款，爆款则靠坚持多发。90%的粉丝是不到10%的爆款涨的。」
-                        <span class="attr">—— 别有所为</span>
-                        <button class="copy-btn" data-copy="涨粉靠爆款，爆款则靠坚持多发。90%的粉丝是不到10%的爆款涨的。">复制</button>
-                    </div>
-                    <p style="font-size:13px;color:var(--muted);">糕效率评价：小别是一个公众号能写十年的人。别有所为自嘲：「好听点是坚持，不好听就是瞎搞。」</p>
-                </div>
-            </div>
-        </section>
-
+    <div class="highlight">
+      「评论说，她不知道是哪条被查到了，还不止一条。」
+      <span class="quote-source">——会计王-自我革命就是杀死自己</span>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p class="footer-slogan">💼 日日向上 · 职场不慌</p>
-        <div class="footer-nav">
-            <a href="#" class="nav-btn">◀ 前一天</a>
-            <a href="#" class="nav-btn">📚 历史日报</a>
-            <a href="#" class="nav-btn">后一天 ▶</a>
+    <div class="highlight">
+      「有诉讼直接说明情况就行，还不承认肯定有坑。」
+      <span class="quote-source">——@宝鹅</span>
+      <button class="copy-btn" onclick="copyText('有诉讼直接说明情况就行，还不承认肯定有坑。——@宝鹅', this)">复制</button>
+    </div>
+
+    <div class="highlight">
+      「就和劈腿一样，因为不知道被抓到的是哪次，所以不敢承认。说话遮遮掩掩的人，不管是不是坏人，首先肯定是笨蛋。」
+      <span class="quote-source">——AA昍</span>
+      <button class="copy-btn" onclick="copyText('说话遮遮掩掩的人，不管是不是坏人，首先肯定是笨蛋。——AA昍', this)">复制</button>
+    </div>
+
+    <p>随后<strong>糕效率</strong>自曝：「我28岁就退休了（不是因为有钱，是傻逼），没有试过什么叫背调。所以我写职场困难重重，根本也没上过几天班。学到很多。」</p>
+    <p><strong>AA昍</strong>最后补了一句：「解释完之后让人更怀疑了……」<strong>糕效率</strong>顺手查了一圈自己有没有欠费——因为宽带和手机套餐经常欠费，也算被背调科普了一把。</p>
+  </section>
+
+  <!-- 三、避坑指南・问答精选 -->
+  <section id="qa" class="card">
+    <h2>三、避坑指南・问答精选</h2>
+    <div class="subtitle">用群友的真实讨论，给职场提个醒</div>
+
+    <div class="qa-item">
+      <div class="qa-q">没上过班的人，能写职场内容吗？</div>
+      <div class="qa-a">能。<strong>糕效率</strong>就是例子：群友一致以为她是「职场老鸟」，实际她28岁就退休、没经历过背调。职场内容不靠工龄，靠的是观察、研究和共情。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-q">被背调问起过往瑕疵，该怎么回应？</div>
+      <div class="qa-a">别遮掩。有诉讼/问题就直接说，遮遮掩掩反而显得问题更大。如果连是哪条都说不清，只会让人怀疑「不止一条」。</div>
+    </div>
+
+    <div class="qa-item">
+      <div class="qa-q">手机宽带欠费会影响背调吗？</div>
+      <div class="qa-a">群友关心的真实问题。背调一般更关注身份、学历、工作经历和诉讼记录；普通通信欠费通常不构成背调污点，但恶意欠费进入征信则要重视。</div>
+    </div>
+  </section>
+
+  <!-- 四、宝藏分享・高能精选 -->
+  <section id="treasure" class="card">
+    <h2>四、宝藏分享・高能精选</h2>
+    <div class="subtitle">数据、商机、金句，一次性打包</div>
+
+    <div class="treasure-grid">
+      <div class="treasure-item">
+        <h4>📊 糕效率 × AI：小红书护肤品牌搜索热度 TOP20</h4>
+        <p><strong>第一梯队：</strong>SK-II、海蓝之谜、兰蔻、雅诗兰黛、修丽可、珀莱雅、巴黎欧莱雅、OLAY</p>
+        <p><strong>第二梯队：</strong>薇诺娜、理肤泉、科颜氏、娇韵诗、资生堂、谷雨、自然堂、赫莲娜</p>
+        <p><strong>第三梯队：</strong>可复美、溪木源、欧诗漫、城野医生</p>
+        <div class="tag-list">
+          <span class="tag">护肤赛道</span>
+          <span class="tag">用户主动搜索</span>
+          <span class="tag">AI辅助</span>
         </div>
-        <p>
-            <a href="#" class="footer-link">关于日日职高</a>
-            <a href="#" class="footer-link">意见反馈</a>
-            <a href="#" class="footer-link">加入社群</a>
-        </p>
-        <p style="font-size:11px;color:var(--muted);margin-top:12px;">© 2026 日日职高 · 数据来自📕自媒体糕校</p>
-    </footer>
+      </div>
 
-    <!-- 侧边目录 -->
-    <nav class="sidebar-nav" id="sidebarNav">
-        <div class="sidebar-title">目录</div>
-        <a href="#section1" class="active">一、今日速览</a>
-        <a href="#section2">二、深度话题</a>
-        <a href="#section3">三、避坑指南</a>
-        <a href="#section4">四、宝藏分享</a>
-    </nav>
+      <div class="treasure-item">
+        <h4>💼 商单机会：光年AI 小红书项目</h4>
+        <p>平台：小红书　|　类型：职场类 / AI数码类</p>
+        <p>粉丝：千粉　|　预算：500元　|　截止：09/04 23:59</p>
+        <p><a href="https://p.baominggongju.com/detail?eid=6a928ac7611f980a2b3effc6" target="_blank" rel="noopener">🔗 报名链接</a></p>
+      </div>
 
-    <!-- 返回顶部 -->
-    <button id="backToTop" class="hidden" title="返回顶部">↑</button>
+      <div class="treasure-item">
+        <h4>🐾 合作置换：北京宠物医院体验项目</h4>
+        <p>深度体检、洗澡美容、定制检查，博主可置换合作，感兴趣可私信联系。</p>
+      </div>
 
-    <!-- Toast -->
-    <div class="toast" id="toast">已复制 ✅</div>
+      <div class="treasure-item">
+        <h4>✍️ 今日金句</h4>
+        <div class="highlight" style="margin:0;">
+          「涨粉靠爆款，爆款则靠坚持多发。」
+          <span class="quote-source">——别有所为</span>
+          <button class="copy-btn" onclick="copyText('涨粉靠爆款，爆款则靠坚持多发。——别有所为', this)">复制</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // ===== 深色模式 =====
-        const darkToggle = document.getElementById('darkModeToggle');
-        const root = document.documentElement;
+</main>
 
-        function getInitialTheme() {
-            try {
-                return localStorage.getItem('rrg-theme') || 'light';
-            } catch (e) {
-                return 'light';
-            }
-        }
+<!-- Footer Nav -->
+<footer class="footer-nav">
+  <nav class="nav">
+    <a class="btn" href="daily-report-2026-08-28.html">← 上一天</a>
+    <a class="btn" href="daily-report-archive.html">历史日报</a>
+    <a class="btn disabled" href="#">下一天 →</a>
+  </nav>
+</footer>
 
-        function applyTheme(theme) {
-            if (theme === 'dark') {
-                root.setAttribute('data-theme', 'dark');
-                darkToggle.textContent = '☀️';
-            } else {
-                root.removeAttribute('data-theme');
-                darkToggle.textContent = '🌙';
-            }
-        }
+<!-- Back to Top -->
+<button id="back-to-top" title="返回顶部">↑</button>
 
-        applyTheme(getInitialTheme());
+<script>
+  // 深色模式切换
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.addEventListener('click', function () {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      html.removeAttribute('data-theme');
+      themeToggle.textContent = '🌙';
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      themeToggle.textContent = '🌞';
+    }
+  });
 
-        darkToggle.addEventListener('click', function() {
-            const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-            const next = current === 'dark' ? 'light' : 'dark';
-            applyTheme(next);
-            try {
-                localStorage.setItem('rrg-theme', next);
-            } catch (e) {}
-        });
+  // 返回顶部
+  const backToTop = document.getElementById('back-to-top');
+  backToTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
-        // ===== 侧边目录滚动高亮 =====
-        const sections = ['section1', 'section2', 'section3', 'section4'];
-        const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+  // 金句一键复制
+  function copyText(text, btn) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        showCopied(btn);
+      }).catch(() => {
+        fallbackCopy(text, btn);
+      });
+    } else {
+      fallbackCopy(text, btn);
+    }
+  }
 
-        function onScroll() {
-            let current = 'section1';
-            for (const id of sections) {
-                const el = document.getElementById(id);
-                if (el && el.getBoundingClientRect().top <= 80) {
-                    current = id;
-                }
-            }
-            sidebarLinks.forEach(link => {
-                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-            });
+  function fallbackCopy(text, btn) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      document.execCommand('copy');
+      showCopied(btn);
+    } catch (err) {
+      alert('复制失败，请手动复制');
+    }
+    document.body.removeChild(textarea);
+  }
 
-            // 返回顶部按钮
-            const backBtn = document.getElementById('backToTop');
-            if (window.scrollY > 300) {
-                backBtn.classList.remove('hidden');
-            } else {
-                backBtn.classList.add('hidden');
-            }
-        }
-
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-
-        // ===== 返回顶部 =====
-        const backBtn = document.getElementById('backToTop');
-        backBtn.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // ===== 金句复制 =====
-        const toast = document.getElementById('toast');
-        let toastTimer = null;
-
-        document.addEventListener('click', function(e) {
-            const btn = e.target.closest('.copy-btn');
-            if (!btn) return;
-            const text = btn.getAttribute('data-copy') || btn.parentElement.textContent.trim();
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(text).then(showToast, showToast);
-            } else {
-                // fallback
-                const ta = document.createElement('textarea');
-                ta.value = text;
-                document.body.appendChild(ta);
-                ta.select();
-                try {
-                    document.execCommand('copy');
-                } catch (err) {}
-                document.body.removeChild(ta);
-                showToast();
-            }
-        });
-
-        function showToast() {
-            toast.classList.add('show');
-            clearTimeout(toastTimer);
-            toastTimer = setTimeout(function() {
-                toast.classList.remove('show');
-            }, 1800);
-        }
-
-        // ===== 平滑滚动（侧边目录） =====
-        sidebarLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').slice(1);
-                const target = document.getElementById(targetId);
-                if (target) {
-                    const top = target.getBoundingClientRect().top + window.pageYOffset - 16;
-                    window.scrollTo({ top: top, behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+  function showCopied(btn) {
+    const old = btn.textContent;
+    btn.textContent = '✓已复制';
+    setTimeout(() => {
+      btn.textContent = old;
+    }, 2000);
+  }
+</script>
 
 </body>
 </html>
