@@ -4,41 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漫道日报 2026-08-29</title>
-
+    
     <!-- SEO 元数据 -->
-    <meta name="description" content="漫道日报 2026年8月29日 - 职场考勤造假危机、代孕合法化争议、工作复盘困境、AI味写作批判等精彩内容分享">
-    <meta name="keywords" content="职场,漫道日报,考勤,代孕,工作复盘,AI写作,报警,自我保护">
+    <meta name="description" content="漫道日报 2026年8月29日 - 考勤代打卡风险、工作复盘与晋升、催收行业新机遇、职场72法则、面对情绪失控的自我保护等精彩内容分享">
+    <meta name="keywords" content="职场,漫道日报,考勤管理,工作复盘,催收行业,72法则,职场安全,AI写作">
     <meta name="author" content="漫道">
-
+    
     <!-- Open Graph / 社交媒体分享标签 -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="漫道日报 2026-08-29">
-    <meta property="og:description" content="职场考勤造假危机、代孕合法化争议、工作复盘困境、AI味写作批判等精彩内容">
+    <meta property="og:description" content="考勤代打卡风险、工作复盘与晋升、催收行业新机遇、职场72法则等精彩内容分享">
     <meta property="og:site_name" content="漫道">
     <meta property="og:locale" content="zh_CN">
-
+    
     <!-- Twitter Card 标签 -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="漫道日报 2026-08-29">
-    <meta name="twitter:description" content="职场考勤造假危机、代孕合法化争议、工作复盘困境等精彩内容">
-
+    <meta name="twitter:description" content="考勤代打卡风险、工作复盘与晋升、催收行业新机遇等精彩内容分享">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C9T7FPDT2"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        gtag('config', 'G-6C9T7FPDT2');
+      gtag('config', 'G-6C9T7FPDT2');
     </script>
-
+    
     <!-- 深色模式预加载脚本 - 终极防闪烁方案 -->
     <script>
+        // 在DOM解析前立即执行，最大程度避免闪烁
         (function() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
+                // 方案1：为html元素添加类
                 document.documentElement.classList.add('dark-mode-preload');
-
+                
+                // 方案2：直接设置body的内联样式（更早生效）
                 const style = document.createElement('style');
                 style.textContent = `
                     html, body { background-color: #1a1a1a !important; color: #e5e5e5 !important; }
@@ -47,7 +50,8 @@
             }
         })();
     </script>
-
+    
+    <!-- 正常标题格式应为：群聊日报 yyyy-mm-dd，以便外部链接查看时了解日报日期 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -65,61 +69,63 @@
         .bento-card {
             background-color: #ffffff;
             border: 1px solid #e9e9eb;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 1rem; /* 16px */
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         .bento-card:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -4px rgba(0,0,0,0.05);
             transform: translateY(-3px);
         }
 
         .number-display {
-            font-weight: 900;
+            font-weight: 900; /* black */
             font-size: 4rem;
             line-height: 1;
+            /* Color will be set by Tailwind, e.g., text-[#4D6BFE] or text-black */
         }
 
         .section-title {
-            font-weight: 800;
-            font-size: 2.25rem;
+            font-weight: 800; /* extrabold */
+            font-size: 2.25rem; /* 36px */
             color: #000000;
-            margin-bottom: 2rem;
-            white-space: nowrap;
+            margin-bottom: 2rem; /* 32px, consistent with Tailwind mb-8 */
+            white-space: nowrap; /* 防止标题换行 */
         }
 
+        /* 手机端响应式调整 */
         @media (max-width: 640px) {
             .section-title {
-                font-size: 1.5rem;
+                font-size: 1.5rem; /* 24px，手机上使用更小的字体 */
                 margin-bottom: 1.5rem;
             }
-
+            
             .number-display {
                 font-size: 3rem;
             }
-
+            
             .bento-card.p-8 {
                 padding: 1.25rem !important;
             }
-
+            
             .bento-card.p-6 {
                 padding: 1rem !important;
             }
-
+            
             .bento-card.p-5 {
                 padding: 0.875rem !important;
             }
-
+            
             h1.text-5xl {
                 font-size: 2rem !important;
                 margin-bottom: 1.25rem !important;
             }
-
+            
             h4.text-xl {
                 font-size: 1.125rem !important;
             }
-
+            
             p.text-xl {
                 font-size: 1rem !important;
             }
@@ -134,6 +140,8 @@
             font-weight: 500;
         }
 
+
+        /* 展开功能相关样式 */
         .expandable-content {
             position: relative;
         }
@@ -169,12 +177,10 @@
             margin-bottom: 0.25rem !important;
             line-height: 1.5 !important;
         }
-
         .content-preview.collapsed br {
             display: none;
         }
-
-        .content-preview.collapsed b+br {
+        .content-preview.collapsed b + br {
             display: inline;
         }
 
@@ -198,45 +204,22 @@
             transform: rotate(180deg);
         }
 
-        .text-\[\#4D6BFE\] {
-            color: #10b981 !important;
-        }
-        .border-\[\#4D6BFE\] {
-            border-color: #10b981 !important;
-        }
-        .border-\[\#93c5fd\] {
-            border-color: #6ee7b7 !important;
-        }
+        /* === 绿色主题统一样式 === */
+        .text-\[\#4D6BFE\] { color: #10b981 !important; }
+        .border-\[\#4D6BFE\] { border-color: #10b981 !important; }
+        .border-\[\#93c5fd\] { border-color: #6ee7b7 !important; }
+        
+        .from-\[\#4D6BFE\]\/20 { --tw-gradient-from: rgb(16 185 129 / 0.20) !important; }
+        .via-\[\#4D6BFE\]\/10 { --tw-gradient-stops: var(--tw-gradient-from), rgb(16 185 129 / 0.10), var(--tw-gradient-to) !important; }
+        .to-\[\#4D6BFE\]\/5 { --tw-gradient-to: rgb(16 185 129 / 0.05) !important; }
 
-        .from-\[\#4D6BFE\]\/20 {
-            --tw-gradient-from: rgb(16 185 129 / 0.20) !important;
-        }
-        .via-\[\#4D6BFE\]\/10 {
-            --tw-gradient-stops: var(--tw-gradient-from), rgb(16 185 129 / 0.10), var(--tw-gradient-to) !important;
-        }
-        .to-\[\#4D6BFE\]\/5 {
-            --tw-gradient-to: rgb(16 185 129 / 0.05) !important;
-        }
-
-        .bg-purple-50 {
-            background-color: #ecfdf5 !important;
-        }
-        .border-purple-200 {
-            border-color: #a7f3d0 !important;
-        }
-        .text-purple-700 {
-            color: #047857 !important;
-        }
-        .text-purple-600 {
-            color: #059669 !important;
-        }
-
-        .hover\:text-blue-700:hover {
-            color: #047857 !important;
-        }
-        .bg-blue-50 {
-            background-color: #ecfdf5 !important;
-        }
+        .bg-purple-50   { background-color: #ecfdf5 !important; }
+        .border-purple-200 { border-color: #a7f3d0 !important; }
+        .text-purple-700   { color: #047857 !important; }
+        .text-purple-600   { color: #059669 !important; }
+        
+        .hover\:text-blue-700:hover { color: #047857 !important; }
+        .bg-blue-50 { background-color: #ecfdf5 !important; }
 
         /* === 新增功能样式 === */
         .floating-action-stack {
@@ -249,7 +232,7 @@
             gap: 0.75rem;
             z-index: 1000;
         }
-
+        
         .toc-floating-container {
             position: relative;
             display: flex;
@@ -257,7 +240,7 @@
             align-items: flex-end;
             gap: 0.75rem;
         }
-
+        
         .toc-floating-button {
             width: 3rem;
             height: 3rem;
@@ -272,17 +255,17 @@
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
             transition: all 0.3s ease;
         }
-
+        
         .toc-floating-button:hover {
             background: #059669;
             transform: translateY(-3px);
             box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
         }
-
+        
         .toc-floating-button.active {
             background: #059669;
         }
-
+        
         .toc-panel {
             position: absolute;
             right: 0;
@@ -301,20 +284,20 @@
             transform: translateY(10px);
             transition: all 0.3s ease;
         }
-
+        
         .toc-panel.active {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
-
+        
         .toc-panel-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 1rem;
         }
-
+        
         .toc-panel-title {
             display: flex;
             align-items: center;
@@ -322,12 +305,12 @@
             font-weight: 700;
             color: #000000;
         }
-
+        
         .toc-panel-title i {
             margin-right: 0.5rem;
             color: #10b981;
         }
-
+        
         .toc-close {
             background: transparent;
             border: none;
@@ -337,18 +320,18 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-
+        
         .toc-close:hover {
             color: #10b981;
             background: rgba(16, 185, 129, 0.1);
         }
-
+        
         .toc-items {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
-
+        
         .toc-link {
             display: flex;
             align-items: center;
@@ -360,68 +343,64 @@
             border-radius: 0.75rem;
             transition: all 0.2s ease;
         }
-
+        
         .toc-link i {
             width: 1rem;
             text-align: center;
             color: #10b981;
         }
-
+        
         .toc-link:hover {
             color: #10b981;
             background-color: #ecfdf5;
             box-shadow: inset 2px 0 0 0 #10b981;
         }
-
+        
         .toc-link.active {
             color: #10b981;
             font-weight: 600;
             background-color: #ecfdf5;
             box-shadow: inset 2px 0 0 0 #10b981;
         }
-
-        body.dark-mode .floating-action-stack {
-            gap: 0.75rem;
-        }
-
+        
         body.dark-mode .toc-panel {
             background-color: #2a2a2a;
             border-color: #3a3a3a;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
         }
-
+        
         body.dark-mode .toc-panel-title {
             color: #f5f5f5;
         }
-
+        
         body.dark-mode .toc-panel-title i {
             color: #34d399;
         }
-
+        
         body.dark-mode .toc-close {
             color: #d1d5db;
         }
-
+        
         body.dark-mode .toc-close:hover {
             background: rgba(16, 185, 129, 0.2);
             color: #34d399;
         }
-
+        
         body.dark-mode .toc-link {
             color: #d1d5db !important;
         }
-
+        
         body.dark-mode .toc-link i {
             color: #34d399;
         }
-
+        
         body.dark-mode .toc-link:hover,
         body.dark-mode .toc-link.active {
             color: #34d399 !important;
             background-color: rgba(16, 185, 129, 0.18) !important;
             box-shadow: inset 2px 0 0 0 rgba(16, 185, 129, 0.6);
         }
-
+        
         .back-to-top {
             width: 3rem;
             height: 3rem;
@@ -437,18 +416,18 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
-
+        
         .back-to-top.visible {
             opacity: 1;
             visibility: visible;
         }
-
+        
         .back-to-top:hover {
             background: #059669;
             transform: translateY(-3px);
             box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
         }
-
+        
         .copy-btn {
             display: inline-flex;
             align-items: center;
@@ -462,119 +441,120 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-
+        
         .copy-btn:hover {
             background: #10b981;
             color: white;
         }
-
+        
         .copy-btn.copied {
             background: #10b981;
             border-color: #10b981;
             color: white;
         }
-
+        
+        /* 暗色模式样式 */
         html.dark-mode-preload,
         html.dark-mode-preload body,
         body.dark-mode {
             background-color: #1a1a1a;
             color: #e5e5e5;
         }
-
+        
         html.dark-mode-preload .bento-card,
         body.dark-mode .bento-card {
             background-color: #2a2a2a;
             border-color: #3a3a3a;
         }
-
+        
         body.dark-mode .section-title {
             color: #f5f5f5;
         }
-
+        
         body.dark-mode .text-black {
             color: #e5e5e5 !important;
         }
-
+        
         body.dark-mode .text-gray-700 {
             color: #a0a0a0 !important;
         }
-
+        
         body.dark-mode .text-gray-600 {
             color: #909090 !important;
         }
-
+        
         body.dark-mode .text-gray-800 {
             color: #c0c0c0 !important;
         }
-
+        
         body.dark-mode .bg-slate-50 {
             background-color: #2f2f2f !important;
         }
-
+        
         body.dark-mode .bg-gray-50 {
             background-color: #2f2f2f !important;
         }
-
+        
         body.dark-mode .bg-gray-100 {
             background-color: #333333 !important;
         }
-
+        
         body.dark-mode .bg-purple-50 {
             background-color: #1a3d2e !important;
         }
-
+        
         body.dark-mode .bg-amber-50 {
             background-color: #3d3420 !important;
         }
-
+        
         body.dark-mode .border-gray-200 {
             border-color: #3a3a3a !important;
         }
-
+        
         body.dark-mode .border-purple-200 {
             border-color: #2d5a44 !important;
         }
-
+        
         body.dark-mode .bg-blue-50 {
             background-color: #1a3d2e !important;
         }
-
+        
         body.dark-mode .border-amber-400 {
             border-color: #d97706 !important;
         }
-
+        
         body.dark-mode .content-preview.collapsed::after {
             background: linear-gradient(transparent, rgba(26, 26, 26, 0.95));
         }
-
+        
         body.dark-mode b,
         body.dark-mode strong {
             color: #f5f5f5 !important;
             font-weight: 700;
             text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.3);
         }
-
+        
         body.dark-mode a {
             color: #6ee7b7;
         }
-
+        
         body.dark-mode a:hover {
             color: #a7f3d0;
         }
-
+        
         body.dark-mode .tag-item {
             background-color: rgba(16, 185, 129, 0.2);
             color: #6ee7b7;
         }
-
+        
         body.dark-mode .text-green-600 {
             color: #6ee7b7 !important;
         }
-
+        
         body.dark-mode .text-green-700 {
             color: #a7f3d0 !important;
         }
-
+        
         body.dark-mode h1,
         body.dark-mode h2,
         body.dark-mode h3,
@@ -582,21 +562,21 @@
         body.dark-mode h5 {
             color: #f5f5f5 !important;
         }
-
+        
         body.dark-mode .border-l-4 {
             opacity: 0.8;
         }
-
+        
         body.dark-mode .copy-btn {
             border-color: #6ee7b7;
             color: #6ee7b7;
         }
-
+        
         body.dark-mode .copy-btn:hover {
             background: #6ee7b7;
             color: #1a1a1a;
         }
-
+        
         .theme-toggle {
             width: 3rem;
             height: 3rem;
@@ -610,41 +590,40 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
-
+        
         .theme-toggle:hover {
             background: #059669;
             transform: translateY(-3px);
             box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
         }
-
+        
+        /* 打印样式 */
         @media print {
-            .floating-action-stack,
-            nav,
-            .copy-btn,
-            .expand-btn {
+            .floating-action-stack, nav, .copy-btn, .expand-btn {
                 display: none !important;
             }
-
+            
             body {
                 background: white;
                 color: black;
             }
-
+            
             .bento-card {
                 box-shadow: none;
                 border: 1px solid #ddd;
                 page-break-inside: avoid;
             }
-
+            
             .content-preview.collapsed {
                 max-height: none !important;
             }
-
+            
             .content-preview.collapsed::after {
                 display: none;
             }
         }
-
+        
+        /* 移动端优化 */
         @media (max-width: 640px) {
             .floating-action-stack {
                 right: 1rem;
@@ -667,10 +646,11 @@
             }
         }
 
+        /* 页面淡入效果 */
         body {
             animation: fadeIn 0.3s ease-in;
         }
-
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -679,12 +659,12 @@
                 opacity: 1;
             }
         }
+
     </style>
 </head>
 <body class="bg-white text-black min-h-screen">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
-        <!-- === 文件头区域 开始 === -->
         <header class="w-full mb-8" role="banner">
             <div class="bento-card p-8">
                 <div class="text-center">
@@ -698,14 +678,13 @@
                         </div>
                         <div class="flex items-center text-gray-700">
                             <i class="fas fa-clock mr-2 text-[#4D6BFE]"></i>
-                            <span>00:21 - 23:55</span>
+                            <span>2026-08-29 00:21 - 2026-08-30 09:03</span>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-
-        <!-- 导航与历史入口 -->
+        
         <nav class="w-full mb-8" aria-label="日期导航">
             <div class="bento-card p-5">
                 <div class="flex items-center justify-between mb-4">
@@ -723,53 +702,51 @@
             </div>
         </nav>
 
-        <!-- === 模块一：今日群聊速览 开始 === -->
         <section id="section-overview" class="w-full mb-12" aria-labelledby="section-overview-title">
             <h2 id="section-overview-title" class="section-title">
                 一、今日群聊速览
             </h2>
             <div class="bento-card p-8 bg-gradient-to-br from-[#10b981]/20 via-[#10b981]/10 to-[#10b981]/5 text-center rounded-2xl">
                 <div class="number-display text-[#4D6BFE]">
-                    650
+                    428
                 </div>
                 <p class="text-xl font-semibold text-black mt-3">总消息数量</p>
             </div>
         </section>
-        <!-- === 模块一：今日群聊速览 结束 === -->
 
-        <!-- === 模块二：职通时刻・深度话题 开始 === -->
+        <!-- 二、职通时刻・深度话题 开始 -->
         <section id="section-topics" class="w-full mb-12" aria-labelledby="section-topics-title">
             <h2 id="section-topics-title" class="section-title">
                 二、职通时刻・深度话题
             </h2>
             <div class="space-y-8">
 
-                <!-- 话题1：分手暴力与报警 开始 -->
-                <div class="bento-card p-6 rounded-xl">
+                <!-- 话题卡片1：考勤代打卡 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            分手暴力风险与报警应对指南
+                            考勤代打卡成“定时炸弹”，拒绝也要讲策略
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            00:46 - 02:03
+                            20:16 - 20:53
                         </span>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            苏云：“现在在跟我前男友要分手，他发疯了好他妈吓人，拿了我送他的衣服烧”
+                            希希：“我有个小事儿想请教一下大家。我之前的老主任不是被之前的院长给换下去了嘛？但还在科室里像个监督。”
                         </p>
                     </div>
 
                     <div class="mb-5">
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">分手暴力</span>
-                            <span class="tag-item">放火罪</span>
-                            <span class="tag-item">报警应对</span>
-                            <span class="tag-item">自我保护</span>
+                            <span class="tag-item">考勤管理</span>
+                            <span class="tag-item">OA权限</span>
+                            <span class="tag-item">职场博弈</span>
+                            <span class="tag-item">风险规避</span>
                         </div>
                     </div>
 
@@ -778,19 +755,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景与起因</b>
-                                    <br>深夜，苏云在群内紧急求助：其前男友在分手期间情绪失控，在她家厨房用天然气灶点火焚烧她送的衣服，黑烟滚滚。她描述前男友"情绪激动"、"很恨我"，且曾提前定好机票要带她去泰国，让她细思极恐。
-                                    <br><br>
-                                    <b>二、主要观点与讨论详情</b>
-                                    <br>1. <b>放火行为的法律定性</b>：<b>AA昍</b>强调放火是刑法八大重罪之一，性质远重于家暴，社会危害性大，必须报警。他说："敢点火的人有多危险"，即使未遂也构成犯罪。<b>大学生主播</b>从执法角度确认："这在北京已经拘了，我就拘过一个"，但也坦承警察怕"一认真女的准反悔"，往往先批评教育。
-                                    <br><br>2. <b>风险意识与自我保护</b>：<b>戒烟day32</b>直言"还不跑吗"；<b>诚实面对自己</b>建议搬家、装可视门铃；<b>糕忙晕中</b>提醒换锁、装监控、必要时申请人身保护令；<b>肥敏蹦叉叉</b>分享自己"分手哭闹摔了我手表都马上报警"的经历。
-                                    <br><br>3. <b>报警实操与证据留存</b>：<b>AA昍</b>强调报警记录是重要法律凭证，"有报警记录的话，你死了之后，你父母要到赔偿的可能性也会大一些"。<b>大学生主播</b>补充，即使这次只是批评教育，下一次报警"全深圳市都能看见你这次报警"。
-                                    <br><br>
-                                    <b>三、争议焦点</b>
-                                    <br>报警是否有用？警察是否会认真处理？——大学生主播解释，因为经常有报警后又反悔的情况，警察普遍先批评教育，但记录会永久留存。
-                                    <br><br>
-                                    <b>四、结论与启发</b>
-                                    <br>遇到有暴力/放火倾向的对象，必须第一时间报警，报警记录是重要的法律凭证；同时要采取搬家、换锁、装监控等实质性自我保护措施；不要因为"默认分手"就放松警惕，安全永远是第一位的。
+                                    <b>一、话题背景</b><br>科室新来的主任经常旷工，却要求希希用自己的账号代打卡、代登录OA系统上报考勤。医务科又私下要求希希在主任缺勤时通知他们查岗。希希夹在中间，左右为难。<br><br><b>二、主要观点</b><br>1. <b>桃乐丝</b>指出：主任负责不了绩效就无需理他；代上OA系统风险极高，就像“帮陌生人托运带行李”。<br>2. <b>阿南</b>补充：登录别人账号在私企属于违规，一旦出事说不清楚，被查到就按违规处理。<br>3. <b>AA昍</b>给出实操建议：先问医务科“你这话有留痕吗？”，自己通知医务科时尽量不留痕；主任再来就一句话：“医务科不让我这么做。”<br>4. <b>BB宝鹅</b>提醒：想清楚为什么老主任、新主任都专门找你？要避免成为好说话的“背锅位”。<br><br><b>三、争议焦点</b><br>帮了主任会不会落好处？拒绝会不会得罪人？<br><br><b>四、结论与启发</b><br>职场中“有求必应”等于默认自己可被利用。代打卡、代登录OA都属于个人权限让渡，一旦出事百口莫辩。正确的做法是表面配合、实际拒绝，把“拒绝的理由”推给规则或第三方。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -808,7 +773,7 @@
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
                                         <p class="text-black text-base">
-                                            <b>放火是八大重罪，性质远重于家暴。</b>即使未遂、即使被口头批评，报警记录也是未来法律纠纷中最重要的证据。
+                                            权限让渡 = 背锅预备。所有沟通留痕，表面配合、实际拒绝，不做“老好人”。
                                         </p>
                                     </div>
                                 </div>
@@ -818,9 +783,9 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    我不参与恋爱话题，但杀人分尸这种事我是热心的。
+                                                    谁信啊？肯定拿好处了，要不然谁会这么干？你又不是傻逼。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '我不参与恋爱话题，但杀人分尸这种事我是热心的。 - AA昍')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '谁信啊？肯定拿好处了，要不然谁会这么干？你又不是傻逼。 - AA昍')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
@@ -831,27 +796,27 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    这在北京已经拘了，我就拘过一个。
+                                                    你愿意给人当枪使吗？
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '这在北京已经拘了，我就拘过一个。 - 大学生主播')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '你愿意给人当枪使吗？ - 桃乐丝')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>大学生主播</b>
+                                                - <b>桃乐丝</b>
                                             </p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    玩火尿床虐待动物，占一条了。
+                                                    只要我成为弱智，就没有任何人能利用我。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '玩火尿床虐待动物，占一条了。 - 咖喱多')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '只要我成为弱智，就没有任何人能利用我 - BB宝鹅')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>咖喱多</b>
+                                                - <b>BB宝鹅</b>
                                             </p>
                                         </div>
                                     </div>
@@ -860,132 +825,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- 话题1：分手暴力与报警 结束 -->
+                <!-- 话题卡片1 结束 -->
 
-                <!-- 话题2：代孕合法化争议 开始 -->
-                <div class="bento-card p-6 rounded-xl">
+                <!-- 话题卡片2：假忙与工作复盘 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            代孕合法化争议：是救助还是剥削？
-                        </h4>
-                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
-                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            14:33 - 15:20
-                        </span>
-                    </div>
-
-                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
-                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
-                        <p class="text-sm text-purple-600 italic">
-                            肥敏蹦叉叉：“[转发聊天记录|屁侠与润和的聊天记录]”
-                        </p>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">代孕</span>
-                            <span class="tag-item">法律伦理</span>
-                            <span class="tag-item">构建剥削</span>
-                            <span class="tag-item">AI味</span>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
-                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
-                            <div class="expandable-content" data-char-limit="200">
-                                <div class="content-preview">
-                                    <b>一、话题背景与起因</b>
-                                    <br>景甜与孙宇晨的代孕传闻引发全网讨论。肥敏蹦叉叉的朋友"润和"趁机提出"救助性代孕合法化"的立法建议，屁侠坚决反对，两人聊天记录被转到群里引发群友热烈讨论。
-                                    <br><br>
-                                    <b>二、主要观点与讨论详情</b>
-                                    <br>1. <b>代孕本质是剥削</b>：<b>会计王小全</b>怒斥"我去他妈了个比"，认为代孕就是剥削；<b>阿南pro</b>指出"卖血都不行，何况是子宫"；<b>是工工不是公公</b>总结"代孕合法就是阶级斗争的完全失败"。
-                                    <br><br>2. <b>法律引导功能</b>：<b>AA昍</b>指出"法律不只是事后处理，还有事前引导的功能"，合法化会制造"有特权的人可以代孕"的局面，现在的"一刀切"本身就是态度。
-                                    <br><br>3. <b>有需求可去境外</b>：<b>AA昍</b>指出，真正走投无路的人可自己花钱出国解决，"悄悄代完回来，没人管"，不必推动国内合法化。
-                                    <br><br>4. <b>AI味的"理中客"</b>：<b>Parabox</b>认为"对面是AI传话太监"；<b>BB宝鹅</b>指出"一股浓浓的AI味"；<b>糕忙晕中</b>一针见血："全文里没有把女人当人来看待"。
-                                    <br><br>
-                                    <b>三、争议焦点</b>
-                                    <br>代孕是否属于个人自由选择？还是结构性剥削？合法化是否真的能保护代孕母亲？
-                                    <br><br>
-                                    <b>四、结论与启发</b>
-                                    <br>在现有法律框架下，代孕无需也不可能合法化；有执念的人可自行去境外解决；推动合法化的论调往往带有AI生成的"理中客"色彩，本质上缺乏对人的基本尊重。
-                                </div>
-                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
-                                    <span class="expand-text">展开全文</span>
-                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
-                        <div class="space-y-6">
-                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
-                                <div class="mb-4">
-                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
-                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
-                                        <p class="text-black text-base">
-                                            <b>代孕合法化是变相剥削，不应推动。</b>法律禁止本身就是立场的表达。有需求可去境外，但不能在中国"开闸"。
-                                        </p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
-                                    <div class="space-y-2">
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    法律不只是事后处理，还有事前引导的功能。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '法律不只是事后处理，还有事前引导的功能。 - AA昍')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    代孕合法就是阶级斗争的完全失败。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '代孕合法就是阶级斗争的完全失败。 - 是工工不是公公')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>是工工不是公公</b>
-                                            </p>
-                                        </div>
-                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
-                                            <div class="flex items-start justify-between mb-2">
-                                                <p class="text-gray-800 italic text-sm flex-1">
-                                                    卖血都不行，何况是子宫。
-                                                </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '卖血都不行，何况是子宫。 - 阿南pro')" title="复制金句">
-                                                    <i class="fas fa-copy"></i>
-                                                </button>
-                                            </div>
-                                            <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>阿南pro</b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 话题2：代孕合法化争议 结束 -->
-
-                <!-- 话题3：工作复盘的困境与突破 开始 -->
-                <div class="bento-card p-6 rounded-xl">
-                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
-                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            工作复盘的困境：用战术勤奋掩盖战略懒惰
+                            用“假忙”逃避工作复盘，晋升永远轮不到你
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
@@ -996,7 +842,7 @@
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            今天学习了吗：“工作日自欺欺人忙，下班时间用健身、多邻国、家务填满，就是不做工作复盘”
+                            今天学习了吗健身了吗读书了吗：“我工作日自欺欺人忙，下班时间用健身、多邻国、家务填满，就是不做工作复盘”
                         </p>
                     </div>
 
@@ -1004,9 +850,9 @@
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="tag-item">工作复盘</span>
-                            <span class="tag-item">自欺欺人</span>
-                            <span class="tag-item">效率</span>
-                            <span class="tag-item">多邻国</span>
+                            <span class="tag-item">晋升困境</span>
+                            <span class="tag-item">自我管理</span>
+                            <span class="tag-item">深度思考</span>
                         </div>
                     </div>
 
@@ -1015,17 +861,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景与起因</b>
-                                    <br>今天学习了吗坦诚地剖析自己：工作日用健身、多邻国、家务把下班时间填满，周末彻底躺平，就是不做工作复盘，导致领导不满、晋升无望。她把这段反思发到群里，希望通过外界视角照见自己。
-                                    <br><br>
-                                    <b>二、主要观点与讨论详情</b>
-                                    <br>1. <b>自欺欺人的忙碌</b>：今天学习了吗意识到自己是在"自欺欺人忙"，用次要任务填满时间，回避最核心的工作复盘——这才是原地踏步的真正原因。
-                                    <br><br>2. <b>运动可能成为新的逃避</b>：<b>AA昍</b>指出"像之前阿南和破浪是把运动当成自欺欺人的道具，健身练得很累，结果反而啥也干不了了"。运动、学习等习惯如果没有与目标结合，就会变成另一种形式的自我安慰。
-                                    <br><br>3. <b>多邻国的"虚假学习"</b>：<b>AA昍</b>直言"多邻国没什么用"，学外语在AI时代价值递减，而且多邻国的游戏化设计本身就不利于深度学习。黄云也分享了自己"在日日说了这个之后，在还有年会员的情况下果断卸了"的经历。
-                                    <br><br>4. <b>复盘与记录的破局价值</b>：<b>AA昍</b>建议"平时还是要日常记录自己的状态，过几周一回头，谁也骗不了谁，就醒了"。<b>别有所为</b>也分享自己的每日计划习惯，"觉得挺有帮助的"。
-                                    <br><br>
-                                    <b>三、结论与启发</b>
-                                    <br>核心是留出时间做工作复盘和深度思考，不能被表面的"忙"骗了。需要区分"真正的自我提升"和"自欺欺人的道具"，用日常记录和定期回顾来校准方向。
+                                    <b>一、话题背景</b><br>群友发现自己的“努力”其实是无效内耗：工作日下班后健身、多邻国、家务排满，却不做工作复盘；周末摆烂刷手机。领导不满意，晋升名额总轮不到自己。<br><br><b>二、主要观点</b><br>1. <b>AA昍</b>直言：多邻国没什么用，现在学外语本身已没太大用；与其用“假学习”填满时间，不如直面工作复盘。<br>2. <b>今天学习了吗</b>反思：大汇报前会预设评委问题所以通过了，但日常小汇报却两手一摊，缺乏思考。<br>3. <b>AA昍</b>进一步指出：健身也可能变成“自欺欺人的道具”，练得很累反而没有时间思考。<br>4. <b>运动喵</b>分享：至少现在知道，哪怕10分钟空闲也要起来动一动。<br><br><b>三、争议焦点</b><br>“努力”和“有效努力”的边界在哪里？工具化的自律是否反而制造了逃避？<br><br><b>四、结论与启发</b><br>用“战术上的勤奋”掩盖“战略上的懒惰”，是职场人最常见的自我欺骗。真正的突破口是：把每一件日常小事都当作“大汇报”来准备，多问自己“下一步会发生什么”。记录真实状态，过几周一回头，谁也骗不了谁。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1043,7 +879,7 @@
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
                                         <p class="text-black text-base">
-                                            <b>战术上的勤奋掩盖不了战略上的懒惰。</b>运动、学习等习惯如果不服务于核心目标，就会变成新一代的"自欺欺人道具"。每日记录是照见自己的镜子。
+                                            高效工作不是拼命填满时间，而是直面核心任务，用真实状态记录对抗自欺欺人。
                                         </p>
                                     </div>
                                 </div>
@@ -1053,9 +889,9 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    有的人是从来不动，身体很差，啥也干不成。健身练得很累，结果反而啥也干不了了。
+                                                    多邻国没什么用。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '有的人是从来不动，身体很差，啥也干不成。健身练得很累，结果反而啥也干不了了。 - AA昍')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '多邻国没什么用。 - AA昍')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
@@ -1066,27 +902,27 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    平时还是要日常记录自己的状态，过几周一回头，谁也骗不了谁，就醒了。
+                                                    还是要多思考。先把工作复盘当个事儿办。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '平时还是要日常记录自己的状态，过几周一回头，谁也骗不了谁，就醒了。 - AA昍')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '还是要多思考。先把工作复盘当个事儿办。 - 今天学习了吗健身了吗读书了吗')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
+                                                - <b>今天学习了吗健身了吗读书了吗</b>
                                             </p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    多邻国没什么用，现在学外语本身已经没太大用了。
+                                                    至少我知道，只要有一点小空闲，起来动一动也是好的。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '多邻国没什么用，现在学外语本身已经没太大用了。 - AA昍')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '至少我知道，只要有一点小空闲，起来动一动也是好的。 - 运动喵')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>AA昍</b>
+                                                - <b>运动喵</b>
                                             </p>
                                         </div>
                                     </div>
@@ -1095,34 +931,34 @@
                         </div>
                     </div>
                 </div>
-                <!-- 话题3：工作复盘的困境与突破 结束 -->
+                <!-- 话题卡片2 结束 -->
 
-                <!-- 话题4：AI味写作 开始 -->
-                <div class="bento-card p-6 rounded-xl">
+                <!-- 话题卡片3：催收行业新局 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
                     <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
                         <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
-                            AI味写作：当表达被"腌入味"之后
+                            扫黑除恶风暴下，催收行业案源翻倍却更考验内功
                         </h4>
                         <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
                             <i class="fas fa-clock mr-1.5 text-gray-500"></i>
-                            13:18 - 16:13
+                            21:59 - 22:02
                         </span>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            AA昍：“我现在每次让AI生成内容的时候，都提醒他不要出现不是而是这样的句子”
+                            大京：“话说，开启扫黑除恶之后，这个月 80% 的催收公司，要么歇业了，要么分散回家作业了”
                         </p>
                     </div>
 
                     <div class="mb-5">
                         <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">AI味</span>
-                            <span class="tag-item">写作</span>
-                            <span class="tag-item">不是而是</span>
-                            <span class="tag-item">思维退化</span>
+                            <span class="tag-item">行业洗牌</span>
+                            <span class="tag-item">案源增长</span>
+                            <span class="tag-item">调解提效</span>
+                            <span class="tag-item">团队协作</span>
                         </div>
                     </div>
 
@@ -1131,17 +967,7 @@
                         <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、话题背景与起因</b>
-                                    <br>AA昍在群里吐槽AI生成内容总带"不是...而是..."句式，引发了关于AI写作特征、以及人类思维被AI影响的讨论。肥敏蹦叉叉分享朋友"润和"的案例——他每天用AI四五个小时，说话已经"没活人味了"。
-                                    <br><br>
-                                    <b>二、主要观点与讨论详情</b>
-                                    <br>1. <b>AI的句式惯性</b>：<b>AA昍</b>发现AI总是生成"不是...而是...""像...像...更像..."等排比句式，无论怎么提示都无法消除。网友尝试加一道"外发前自我检查"的skill，效果才稍好一些。
-                                    <br><br>2. <b>世界知识的缺失</b>：<b>Parabox</b>指出"AI一定能写好代码和数学题，但'没被写出来的世界知识'是没法学的"，AI训练的语料注定让它成为"越来越强的伪人"。
-                                    <br><br>3. <b>被AI"腌入味"</b>：<b>肥敏蹦叉叉</b>分享与润和的对话，对方承认"每天要用四五个小时以上"AI，已经"觉得有一股很浓的AI味"。群友吐槽"他现在跟你聊天，你已经都快没活人味了"。
-                                    <br><br>4. <b>AI写作的代价</b>：<b>AA昍</b>总结"用ai的最大代价是毁脑子"。<b>梅烦恼</b>补充AI写作的特征："不是...而是...是...是...更是...还有很多排比句"。
-                                    <br><br>
-                                    <b>三、结论与启发</b>
-                                    <br>AI生成的内容有明显的句式特征，需要通过人工检查和调整来"去AI味"；过度依赖AI会让人的表达方式和思维方式被"腌入味"；真正的写作需要人类独有的情感和经验。
+                                    <b>一、话题背景</b><br>大京所在公司负责催收/调解业务。扫黑除恶之后，大量催收公司歇业，未来案件量将大幅增加，团队需要提升调解成功率。<br><br><b>二、主要观点</b><br>1. <b>大京</b>判断：未来半年是小组“短暂的捡钱机会”。<br>2. <b>尼要早睡</b>印证：很多助贷公司都被收拾了，行业正在合规化。<br>3. <b>大京</b>分析：有的催收公司不给员工交社保，一出事就被团队盯上；软暴力催收也在被打击。<br>4. <b>大京</b>提出：团队正在探索一套独特的效率方法，试验成功就能向其他团队推广。<br><br><b>三、争议焦点</b><br>案件量翻倍是机遇还是泡沫？怎么把“短期红利”转化为“长期能力”？<br><br><b>四、结论与启发</b><br>外部洗牌带来案源红利，但最终比拼的是团队内功：调解效率和成功率。大环境变化时，更要打磨“可复制的方法论”。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1159,7 +985,7 @@
                                     <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
                                     <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
                                         <p class="text-black text-base">
-                                            <b>AI的"AI味"是可以被识别的，更重要的是：过度依赖AI会让人类的思考能力和表达方式退化。</b>AI是提效工具，但不能成为思考的替代品。
+                                            行业洗牌期，短期看案源，长期看团队能否沉淀出可复制、可推广的效率方法论。
                                         </p>
                                     </div>
                                 </div>
@@ -1169,9 +995,102 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    用AI的最大代价是毁脑子，别的其实都是其次。
+                                                    算是短暂的捡钱机会。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '用AI的最大代价是毁脑子，别的其实都是其次。 - AA昍')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '算是短暂的捡钱机会。 - 大京')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>大京</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    下个月，我们公司这边的案件量又会大幅增加。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '下个月，我们公司这边的案件量又会大幅增加。 - 大京')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>大京</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 话题卡片3 结束 -->
+
+                <!-- 话题卡片4：漫道职场群发布 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            “72法则”算清薪资翻倍，从退休倒推现在怎么干
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            17:39 - 17:43
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            AA昍：“希望同志们在职场上 都记住【72】这个数：用它除以你的工资涨幅，你就知道自己几年翻倍”
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">薪资翻倍</span>
+                            <span class="tag-item">退休规划</span>
+                            <span class="tag-item">职场效率</span>
+                            <span class="tag-item">目标管理</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景</b><br>群主发布“漫道”职场群——一个只聊工作和加薪的群，并提出了“72法则”作为核心工具。<br><br><b>二、主要观点</b><br>1. 用72除以工资涨幅，可快速算出薪资翻倍所需年数：一次涨35%约2年，涨25%约3年，涨20%约4年，涨15%约5年，涨12%约6年，涨10%约7年。<br>2. 对“退休”目标倒推：所需存款年限+涨薪年限，看是否可以接受。<br>3. 群名“漫道”的深意：“莫道”难、“漫长的道路”。职场少抱怨、多奋斗，面向KPI、简历和退休工作。<br><br><b>三、结论与启发</b><br>职场不只看“本月工资”，更要看“翻倍时间”和“退休倒计时”。用长期视角校准当下努力方向，把升职加薪当成一个可以拆解和规划的工程。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            用“翻倍年限+退休倒推”建立长期视角：少说少丧少抱怨，面向目标干。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    雄关漫道真如铁，而今迈步从头越。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '雄关漫道真如铁，而今迈步从头越。 - AA昍')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
@@ -1182,27 +1101,27 @@
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    现在跟你聊天，你已经都快没活人味了，感觉被AI腌入味了。
+                                                    社主义是干出来的，不是靠说。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '现在跟你聊天，你已经都快没活人味了，感觉被AI腌入味了。 - 屁侠')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '社主义是干出来的，不是靠说。 - AA昍')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>屁侠</b>
+                                                - <b>AA昍</b>
                                             </p>
                                         </div>
                                         <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
                                             <div class="flex items-start justify-between mb-2">
                                                 <p class="text-gray-800 italic text-sm flex-1">
-                                                    AI一定能写好代码和数学题，但"没被写出来的世界知识"是没法学的。
+                                                    少说少丧少抱怨，在职场开口说话，一定要有目的。
                                                 </p>
-                                                <button class="copy-btn ml-2" onclick="copyQuote(this, 'AI一定能写好代码和数学题，但\"没被写出来的世界知识\"是没法学的。 - Parabox')" title="复制金句">
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '少说少丧少抱怨，在职场开口说话，一定要有目的。 - AA昍')" title="复制金句">
                                                     <i class="fas fa-copy"></i>
                                                 </button>
                                             </div>
                                             <p class="text-gray-600 text-xs mt-1 self-end">
-                                                - <b>Parabox</b>
+                                                - <b>AA昍</b>
                                             </p>
                                         </div>
                                     </div>
@@ -1211,32 +1130,138 @@
                         </div>
                     </div>
                 </div>
-                <!-- 话题4：AI味写作 结束 -->
+                <!-- 话题卡片4 结束 -->
+
+                <!-- 话题卡片5：面对情绪失控 开始 -->
+                <div class="bento-card p-6 rounded-xl"> 
+                    <div class="flex flex-col sm:flex-row items-start justify-between mb-4">
+                        <h4 class="text-xl font-bold text-black flex-1 mb-2 sm:mb-0">
+                            面对情绪失控的人，保护自己比讲道理更重要
+                        </h4>
+                        <span class="text-sm text-gray-600 ml-0 sm:ml-4 whitespace-nowrap bg-gray-100 px-3 py-1.5 rounded-md">
+                            <i class="fas fa-clock mr-1.5 text-gray-500"></i>
+                            00:46 - 02:03
+                        </span>
+                    </div>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            苏云：“现在在跟我前男友要分手，他发疯了好他妈吓人，拿了我送他的衣服烧，好几件烧的黑烟滚滚。”
+                        </p>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">相关关键词</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tag-item">人身安全</span>
+                            <span class="tag-item">危机处理</span>
+                            <span class="tag-item">报警留痕</span>
+                            <span class="tag-item">公共安全</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <p class="text-sm font-semibold text-gray-800 mb-2">详细内容</p>
+                        <div class="text-gray-700 text-base leading-relaxed bg-slate-50 p-4 rounded-md prose prose-sm max-w-none">
+                            <div class="expandable-content" data-char-limit="200">
+                                <div class="content-preview">
+                                    <b>一、话题背景</b><br>苏云在分手过程中，前男友情绪失控，在她的厨房里点燃衣物，浓烟滚滚。她报警后民警到场批评教育，并提醒“如果后续再有过激行为再联系”。<br><br><b>二、主要观点</b><br>1. <b>大学生主播</b>指出：这类行为在北京已可拘留；官僚主义的玩法可以先刑拘，报检察院让检察院说不够。不能因为是熟人、因为没烧起来就姑息。<br>2. <b>AA昍</b>强调：放火是刑法上的“具体危险犯”，虽然没有独立燃烧可能不构成既遂，但性质与家暴完全不同，涉及公共安全，风险等级是质变。<br>3. <b>肥敏蹦叉叉</b>提醒：一定要报警，派出所会有记录，下次再报警全市都能看到这次历史。<br>4. <b>宇妈</b>反问：不灭火不就起火了吗？这正是放火罪的真正危险。<br><br><b>三、争议焦点</b><br>没有造成实际损害，警察只调解不立案，是否就“没事了”？<br><br><b>四、结论与启发</b><br>遇到他人用危险行为威胁时，报警不只是为了“处理”，更是为了“留痕”。成年人一旦敢点火，风险等级就发生质变。要主动和社区、邻里、警方同步信息，保护好自己和公共安全。不要用“他没真的烧起来”来麻痹自己。
+                                </div>
+                                <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                    <span class="expand-text">展开全文</span>
+                                    <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-sm font-semibold text-gray-800 mb-3">关键结论与金句时刻</p>
+                        <div class="space-y-6">
+                            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                                <div class="mb-4">
+                                    <h5 class="text-base font-semibold text-gray-800 mb-2">关键结论</h5>
+                                    <div class="border-l-4 border-[#4D6BFE] pl-4 py-3 bg-blue-50 rounded-r-md">
+                                        <p class="text-black text-base">
+                                            放火是重罪，报警就是留痕；面对可能危害公共安全的人，永远不要“你以为”。
+                                        </p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-700 mb-2"><strong>金句时刻</strong></p>
+                                    <div class="space-y-2">
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    受案才有回执，直接批评两句走了，显然是没当成案子受。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '受案才有回执，直接批评两句走了，显然是没当成案子受。 - 大学生主播')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>大学生主播</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    你要明白，如果今天他把你杀了，在案情分析里，你俩是准夫妻，量刑很轻。不要唯心主义，不要你以为。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '你要明白，如果今天他把你杀了，在案情分析里，你俩是准夫妻，量刑很轻。不要唯心主义，不要你以为。 - AA昍')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>AA昍</b>
+                                            </p>
+                                        </div>
+                                        <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-md flex flex-col">
+                                            <div class="flex items-start justify-between mb-2">
+                                                <p class="text-gray-800 italic text-sm flex-1">
+                                                    放火是八大罪。
+                                                </p>
+                                                <button class="copy-btn ml-2" onclick="copyQuote(this, '放火是八大罪。 - Han')" title="复制金句">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                            <p class="text-gray-600 text-xs mt-1 self-end">
+                                                - <b>Han</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 话题卡片5 结束 -->
 
             </div>
         </section>
-        <!-- === 模块二：职通时刻・深度话题 结束 === -->
+        <!-- 二、职通时刻・深度话题 结束 -->
 
-        <!-- === 模块三：避坑指南・问答精选 开始 === -->
+        <!-- 三、避坑指南・问答精选 开始 -->
         <section id="section-qa" class="w-full mb-12" aria-labelledby="section-qa-title">
             <h2 id="section-qa-title" class="section-title">
                 三、避坑指南・问答精选
             </h2>
             <div class="space-y-8">
 
-                <!-- 问答1：考勤造假 开始 -->
-                <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
+                <!-- 问答1 开始 -->
+                <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]"> 
                     <div class="mb-4">
                         <h4 class="text-xl font-semibold text-black flex items-center">
                             <i class="fas fa-question-circle mr-2.5 text-[#4D6BFE] text-lg"></i>
-                            主任让我登录他的OA打考勤，我该拒绝吗？
+                            提问：主任让我代打卡、代登OA，说他年纪大了不会用，我该怎么办？
                         </h4>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            希希：“他把考勤、排班什么的杂活全都交给我，还专门跟我说了很多次，意思是他不来也给他记成来了”
+                            希希：“他授权我了 而且我聊天记录还留着呢”
                         </p>
                     </div>
 
@@ -1248,19 +1273,7 @@
                         <div class="text-gray-700 text-base leading-relaxed prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、问题背景</b>
-                                    <br>希希所在的基层医疗单位，新来的主任经常旷工、出去接私活，让她登录主任自己的OA账号、按全勤发考勤。同时医务科又私下让她汇报主任缺勤情况。她被夹在主任和医务科之间，进退两难。
-                                    <br><br>
-                                    <b>二、核心风险分析</b>
-                                    <br>1. <b>法律风险</b>：<b>大学生主播</b>明确表态——登录别人账号代打考勤"在北京已经拘了"，阿南pro也提醒"查到登录别人账号会按违规处理"。<b>桃乐丝</b>更是警告"没有授权进别人OA你是要造反啊"。
-                                    <br>2. <b>背锅风险</b>：<b>AA昋</b>指出"你说免费帮别人干这个活儿，谁信啊？肯定拿好处了……百口莫辩"。一旦出事，主任完全可以推脱"我不会用OA，都是她弄的"。
-                                    <br>3. <b>被当枪使</b>：医务科想借希希之手抓主任把柄，但她们不会保护希希。桃乐丝问得很直接："你愿意给人当枪使吗？你有干翻他的实力吗？"
-                                    <br><br>
-                                    <b>三、解决方案与建议</b>
-                                    <br>1. <b>坚决不碰他人账号</b>：无论是授权还是私下帮忙，一律推掉。AA昋建议用"医务科不让我这么做"挡回去，或者用"同义反复"战术——"我帮你登录一下OA？""听懂了吧？""没有。"
-                                    <br>2. <b>考勤按实际情况记录</b>：希希现在做的就是正确操作——如实记录，不造假。下一步发考勤的流程走自己的即可，主任的账号让他自己操作。
-                                    <br>3. <b>建立"不好惹"人设</b>：<b>BB宝鹅</b>提醒"想一想为啥这个老登不找别人只找你"，桃乐丝补充"他不是第一次遇见你这种人了"。要让别人知道你不是软柿子。
-                                    <br>4. <b>凡事留痕</b>：所有口头要求尽量转为微信文字，保留证据，防止将来被反咬一口。
+                                    <b>一、问题背景</b><br>主任长期旷工，把考勤和排班交给希希，要求用他的账号给他算全勤；医务科知道后同时要求希希“查岗”。希希被夹在中间。<br><br><b>二、核心原因分析</b><br>主任看中的是希希“好说话、没原则”的软柿子属性。代操作OA，本质上是在替他掩盖旷工。一旦查出，操作记录全部落在希希头上，轻则违规，重则背锅。<br><br><b>三、解决方案与建议</b><br>1. 绝对不要登录别人的OA代打卡。<br>2. 使用“同义反复”拒绝法——他说“帮我登录OA”，你说“我帮你登录OA？”；他说“听懂了吗”，你说“没有”。<br>3. 把锅甩给规则：“医务科特意说过，不让这么干。”<br>4. 想清楚：他和你非亲非故，替他承担违规风险，不值得。保持沉默也可能把风险留给自己，这不是客气的时候。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1272,28 +1285,27 @@
 
                     <div class="mt-5 pt-4 border-t border-gray-200">
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">职场考勤</span>
-                            <span class="tag-item">账号安全</span>
-                            <span class="tag-item">背锅</span>
-                            <span class="tag-item">留痕</span>
+                            <span class="tag-item">考勤管理</span>
+                            <span class="tag-item">OA权限</span>
+                            <span class="tag-item">职场沟通</span>
                         </div>
                     </div>
                 </div>
-                <!-- 问答1：考勤造假 结束 -->
+                <!-- 问答1 结束 -->
 
-                <!-- 问答2：账号权限 开始 -->
-                <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
+                <!-- 问答2 开始 -->
+                <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]"> 
                     <div class="mb-4">
                         <h4 class="text-xl font-semibold text-black flex items-center">
                             <i class="fas fa-question-circle mr-2.5 text-[#4D6BFE] text-lg"></i>
-                            认证账号还没下来，能借同事的账号或用私人手机联系用户吗？
+                            提问：报警后没有回执，民警批评几句就走了，这还有防护效果吗？
                         </h4>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            猫猫：“我可以先借别人账号做这个事儿，后来我和别人试了，发现账号换手机登陆没那么容易”
+                            苏云：“警察可能确实很忙，问了我我说没什么诉求，我就是害怕火灾引起严重后果”
                         </p>
                     </div>
 
@@ -1305,18 +1317,7 @@
                         <div class="text-gray-700 text-base leading-relaxed prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、问题背景</b>
-                                    <br>猫猫在工作中需要联系用户，但认证账号还在申请中。同事建议她先借别人的账号凑合，或者用自己手机直接给用户打电话。
-                                    <br><br>
-                                    <b>二、核心风险分析</b>
-                                    <br>1. <b>账号风险</b>：账号换手机登录不容易，一旦用他人账号产生问题，责任难以划分。如果对方用你的私人号码去做什么，你担保不了。
-                                    <br>2. <b>隐私风险</b>：用私人手机联系用户，等于把自己的隐私暴露给工作对象。将来离职后，用户还可能通过这个号码找到你。
-                                    <br>3. <b>合规风险</b>：业务操作应走公司正规审批流程，用私人渠道开展业务容易违反公司规定。
-                                    <br><br>
-                                    <b>三、解决方案与建议</b>
-                                    <br>1. <b>坚持走正规申请流程</b>：猫猫庆幸自己没有抄近路——"我现在就庆幸是走的需要申请的账号，我离职了信息也都会被消除掉，找不到我私人联系方式"。
-                                    <br>2. <b>不办不方便办的事</b>：如果认证账号没下来，业务推进不了就如实汇报，让领导去协调，不要自己想办法"变通"。
-                                    <br>3. <b>用合规的方式等一等</b>：账号审批是公司流程，等下来再推进业务，风险最小。
+                                    <b>一、问题背景</b><br>前男友在厨房烧衣服，苏云扑灭并报警。警察记录后离开，没有正式受案，因此没有回执。<br><br><b>二、核心原因分析</b><br>未造成实质后果、双方情绪稳定，民警现场按“家庭琐事”调解。受案才会出具回执，调解结案的通常不会。<br><br><b>三、解决方案与建议</b><br>1. 这次报警记录不会消失。下次再报警，全市系统都能查到这次的记录，这就是他“有前科”的证明。<br>2. 如果对方再次过激，第一时间报警，并主动提示接警员“我上次已经报过一次警”。<br>3. 可以前往派出所要求调取报警记录，或申请《受案回执》，表达诉求，哪怕不一定给，也要留下申请记录。<br>4. 搬家、换锁、装监控，不要让自己处在他随时能找到的空间里。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1328,27 +1329,27 @@
 
                     <div class="mt-5 pt-4 border-t border-gray-200">
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">账号权限</span>
-                            <span class="tag-item">隐私保护</span>
-                            <span class="tag-item">合规流程</span>
+                            <span class="tag-item">报警记录</span>
+                            <span class="tag-item">人身安全</span>
+                            <span class="tag-item">受案回执</span>
                         </div>
                     </div>
                 </div>
-                <!-- 问答2：账号权限 结束 -->
+                <!-- 问答2 结束 -->
 
-                <!-- 问答3：群聊内耗 开始 -->
-                <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
+                <!-- 问答3 开始 -->
+                <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]"> 
                     <div class="mb-4">
                         <h4 class="text-xl font-semibold text-black flex items-center">
                             <i class="fas fa-question-circle mr-2.5 text-[#4D6BFE] text-lg"></i>
-                            在小群插不上话想退群，又怕显得突兀怎么办？
+                            提问：AI生成内容总带“AI味”，怎么调教都不听，怎么办？
                         </h4>
                     </div>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            小喵踩水：“有没有人遇到过待在一个几个人的小群，群里的话题接不下去，又不好意思退群的情况”
+                            AA昍：“我现在每次让AI生成内容的时候，都提醒他不要出现不是而是这样的句子，他说好的，没问题，然后会生成一堆这样的句子。”
                         </p>
                     </div>
 
@@ -1360,18 +1361,7 @@
                         <div class="text-gray-700 text-base leading-relaxed prose prose-sm max-w-none">
                             <div class="expandable-content" data-char-limit="200">
                                 <div class="content-preview">
-                                    <b>一、问题背景</b>
-                                    <br>小喵踩水在一个四五个人的小群里，其他人都聊得很好，只有她插不上话。想退群吧，怕显得突兀；不退吧，自己又内耗难受。
-                                    <br><br>
-                                    <b>二、核心原因分析</b>
-                                    <br>1. 小喵自己反思："根本上，我应该是太在意别人看法了，或者说太把自己当回事了。"
-                                    <br>2. 这种情况的本质是——群里的话题自己没有参与感，但又担心退群这个动作会被别人解读为"不满"或"疏远"。
-                                    <br><br>
-                                    <b>三、解决方案与建议</b>
-                                    <br>1. <b>物理隔离</b>：<b>AA昍</b>建议删除聊天记录、折叠群聊、设为不再提醒——"你平时根本看不到"就不内耗了。
-                                    <br>2. <b>自己起话题</b>：<b>会计王小全</b>指出"别人的话题插不进去，你就自己起一个"，把主动权拿回来。
-                                    <br>3. <b>顺其自然</b>：小喵最终自己得出结论"顺其自然，怎样都行，反正不要多想和内耗了"。
-                                    <br>4. <b>区分核心圈层</b>：真正值得维护的关系，不会因为你不说话就断了；值得维护的关系，你自然会有话想说。
+                                    <b>一、问题背景</b><br>经常需要AI协作完成文档、文案，但AI生成内容有浓重的“AI腔”——大量“不是…而是…”“是…也是…更是…”排比句。<br><br><b>二、核心原因分析</b><br>模型训练语料偏好生成对仗句；单纯在提示词里写“不要出现…”通常会被忽略，甚至反向触发，越强调“不要”越来劲。<br><br><b>三、解决方案与建议</b><br>1. 生成后把AI味句子指出来，要求“只改这几句，重新生成”，而不是全局“不要”。<br>2. 将“输出前检查”写入工作流或Skill，让AI先自查再交付。<br>3. 要求AI“用短句、少排比、口语化”，尽量贴近真人表达。<br>4. 重要内容最终用真人视角改一遍，AI只做资料整理和初稿。
                                 </div>
                                 <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                     <span class="expand-text">展开全文</span>
@@ -1383,51 +1373,42 @@
 
                     <div class="mt-5 pt-4 border-t border-gray-200">
                         <div class="flex flex-wrap gap-2">
-                            <span class="tag-item">群聊内耗</span>
-                            <span class="tag-item">社交焦虑</span>
-                            <span class="tag-item">自我价值</span>
+                            <span class="tag-item">AI写作</span>
+                            <span class="tag-item">提示词技巧</span>
+                            <span class="tag-item">内容质感</span>
                         </div>
                     </div>
                 </div>
-                <!-- 问答3：群聊内耗 结束 -->
+                <!-- 问答3 结束 -->
 
             </div>
         </section>
-        <!-- === 模块三：避坑指南・问答精选 结束 === -->
+        <!-- 三、避坑指南・问答精选 结束 -->
 
-        <!-- === 模块四：宝藏分享・高能时刻 开始 === -->
+        <!-- 四、宝藏分享・高能时刻 开始 -->
         <section id="section-highlights" class="w-full mb-12" aria-labelledby="section-highlights-title">
             <h2 id="section-highlights-title" class="section-title">
                 四、宝藏分享・高能时刻
             </h2>
             <div class="space-y-8">
 
-                <!-- 资源1：漫道职场群 开始 -->
+                <!-- 宝藏1 开始 -->
                 <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
                     <h4 class="text-xl font-semibold text-black mb-3">
-                        「漫道」职场群正式开放
+                        《裂周》：用唯物史观重读西周的“职场教科书”
                     </h4>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
                         <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
                         <p class="text-sm text-purple-600 italic">
-                            AA昍：“职场「漫道」群公告…首月（9月自然月）体验费72元”
+                            AA昍：“《裂周》这本书有点意思，又看到一个细节：作者提到，青铜器只需要加热到800度就能生产，但需要铜、锡或铅至少两种金属”
                         </p>
                     </div>
 
                     <div class="text-gray-700 text-base mb-4 leading-relaxed prose prose-sm max-w-none">
                         <div class="expandable-content" data-char-limit="200">
                             <div class="content-preview">
-                                <b>一、推荐内容</b>
-                                <br>AA昍正式发布「漫道」职场群开放公告。该群的定位是"社会主义职场奋斗群"，核心方法是"72法则"——用72除以工资涨幅，估算自己几年翻倍。例如一次涨35%，2年翻倍；一次涨10%，7年翻倍。
-                                <br><br>
-                                <b>二、核心价值与特点</b>
-                                <br>1. <b>工作导向</b>：只聊工作、只聊加薪，不闲聊。
-                                <br>2. <b>方法论清晰</b>：围绕"KPI、简历、退休"三条线展开，提倡"面向KPI和汇报工作，面向简历和跳槽工作，长期面向退休工作"。
-                                <br>3. <b>社群价值观</b>：强调"少说少丧少抱怨"，在职场上开口说话一定要有目的，思考能否实现目的。
-                                <br><br>
-                                <b>三、适用场景</b>
-                                <br>适合所有期望在职场中实现升职加薪、提前退休的职场人。首月体验费72元，感兴趣的群友可私信AA昍加入。
+                                <b>一、推荐内容</b><br><b>AA昍</b>在群内多次分享《裂周》中的精彩细节：青铜文明与铁器文明的社会性格差异、周代国家权力结构的“三权分立”原型、周厉王被污名化的历史考据、周幽王时代“申侯血统”的继承战争等。<br><br><b>二、核心价值与特点</b><br>帮助读者跳出传统“宫廷阴谋论”，用资源种类、军工技术和婚姻网络来解释大历史。对理解权力结构和组织演变有很强的启发，也对梳理职场组织关系有间接帮助。<br><br><b>三、适用场景</b><br>历史爱好者、战略思考、书单收藏。适合在通勤和睡前阅读，每一节都可以当作一个“组织案例”来琢磨。
                             </div>
                             <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                 <span class="expand-text">展开全文</span>
@@ -1436,58 +1417,17 @@
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="tag-item">职场社群</span>
-                        <span class="tag-item">升职加薪</span>
-                        <span class="tag-item">72法则</span>
+                        <span class="tag-item">历史读物</span>
+                        <span class="tag-item">唯物史观</span>
+                        <span class="tag-item">组织行为</span>
                     </div>
                 </div>
-                <!-- 资源1：漫道职场群 结束 -->
+                <!-- 宝藏1 结束 -->
 
-                <!-- 资源2：龙餐馆电影 开始 -->
+                <!-- 宝藏2 开始 -->
                 <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
                     <h4 class="text-xl font-semibold text-black mb-3">
-                        《欢迎来龙餐馆》观后感：很多道理是相通的
-                    </h4>
-
-                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
-                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
-                        <p class="text-sm text-purple-600 italic">
-                            猫猫：“看了《欢迎来龙餐馆》这部电影，票价29元，感谢共产观影活动！”
-                        </p>
-                    </div>
-
-                    <div class="text-gray-700 text-base mb-4 leading-relaxed prose prose-sm max-w-none">
-                        <div class="expandable-content" data-char-limit="200">
-                            <div class="content-preview">
-                                <b>一、推荐内容</b>
-                                <br>猫猫参与群内"共产观影"活动，观看电影《欢迎来龙餐馆》（票价29元）并分享观后感。
-                                <br><br>
-                                <b>二、核心价值与特点</b>
-                                <br>1. <b>命运观的启示</b>："每个人做的选择，都会引导他走到接下来的命运中去"。
-                                <br>2. <b>职场逻辑的借鉴</b>："出事了要先找头儿，做好汇报很重要"，这与职场中向上管理的逻辑完全一致。
-                                <br>3. <b>文化自信的体现</b>：电影展现了中国文化在中东的扎根与适应，群友也从中看到了"文明的力量"。
-                                <br><br>
-                                <b>三、适用场景</b>
-                                <br>适合对中东问题、中国文化出海、以及"使命与选择"主题感兴趣的群友观看。共产观影活动仍在持续，欢迎更多群友参与并分享感想。
-                            </div>
-                            <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
-                                <span class="expand-text">展开全文</span>
-                                <i class="fas fa-chevron-down ml-1 expand-icon"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tag-item">电影推荐</span>
-                        <span class="tag-item">共产观影</span>
-                        <span class="tag-item">职场逻辑</span>
-                    </div>
-                </div>
-                <!-- 资源2：龙餐馆电影 结束 -->
-
-                <!-- 资源3：实体记账 开始 -->
-                <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
-                    <h4 class="text-xl font-semibold text-black mb-3">
-                        实体记账法：让开销环比下降50%的秘诀
+                        实体账本记账法：开销环比直降50%
                     </h4>
 
                     <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
@@ -1500,16 +1440,7 @@
                     <div class="text-gray-700 text-base mb-4 leading-relaxed prose prose-sm max-w-none">
                         <div class="expandable-content" data-char-limit="200">
                             <div class="content-preview">
-                                <b>一、推荐内容</b>
-                                <br>咖喱多分享了自己的实体记账方法，并展示成果：上个月开销环比下降50%。
-                                <br><br>
-                                <b>二、核心价值与特点</b>
-                                <br>1. <b>操作简单</b>：只用支付宝和微信支付；入户位置放账本，到家第一件事就是记账；每日只需记录时间和金额。
-                                <br>2. <b>体感强烈</b>：手写比App更快、更有体感，让你对每一笔钱都保持敏感。
-                                <br>3. <b>行为改变</b>："每一笔钱在花的时候都会思考一下要不要花，就花的少了"。
-                                <br><br>
-                                <b>三、适用场景</b>
-                                <br>适用于所有想控制开支、优化消费习惯的群里朋友。工具上还可以用三根笔做分层记录——黑笔记时间金额，蓝笔写总额，红笔做复盘标记。
+                                <b>一、推荐内容</b><br><b>咖喱多</b>分享用实体账本手写记账半个月，开销环比大降50%。具体做法：每天只用支付宝和微信，在入户处放个账本，到家第一件事就是记账，记下当日开销和总金额。<br><br><b>二、核心价值与特点</b><br>手写比App快，更有“对钱的体感”；每一笔钱在花的时候都会思考一下要不要花，花钱就变少了。App记账反而容易选择性遗忘，数字无感。<br><br><b>三、适用场景</b><br>月光族、想攒钱/改善消费习惯的人。红色笔标记复盘，蓝色笔写总额，周期review，仪式感也很重要。
                             </div>
                             <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
                                 <span class="expand-text">展开全文</span>
@@ -1517,17 +1448,49 @@
                             </button>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tag-item">省钱</span>
-                        <span class="tag-item">记账</span>
-                        <span class="tag-item">习惯养成</span>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-item">个人理财</span>
+                        <span class="tag-item">记账方法</span>
+                        <span class="tag-item">消费降级</span>
                     </div>
                 </div>
-                <!-- 资源3：实体记账 结束 -->
+                <!-- 宝藏2 结束 -->
+
+                <!-- 宝藏3 开始 -->
+                <div class="bento-card p-6 rounded-xl border-l-4 border-[#93c5fd]">
+                    <h4 class="text-xl font-semibold text-black mb-3">
+                        《人体交易》：看见“身体”如何被当作商品
+                    </h4>
+
+                    <div class="mb-4 bg-purple-50 border border-purple-200 rounded-md p-3">
+                        <p class="text-sm font-medium text-purple-700 mb-1">爬楼关键词</p>
+                        <p class="text-sm text-purple-600 italic">
+                            66：“《人体交易（译文纪实）》斯科特·卡尼”
+                        </p>
+                    </div>
+
+                    <div class="text-gray-700 text-base mb-4 leading-relaxed prose prose-sm max-w-none">
+                        <div class="expandable-content" data-char-limit="200">
+                            <div class="content-preview">
+                                <b>一、推荐内容</b><br><b>66</b>在讨论“代孕是否合法化”时推荐了《人体交易（译文纪实）》。她指出：不仅是子宫，人体的一切都可以被剥削。<br><br><b>二、核心价值与特点</b><br>以纪实手法揭露全球人体交易黑市产业链：代孕、器官买卖、童工、卖血；帮助你看清“自愿”背后的结构性剥削，对讨论公共议题很有价值。<br><br><b>三、适用场景</b><br>关心社会议题、想提升认知的读者。读完会对“代孕合法化”“人体器官交易”等讨论拥有更冷静和系统的判断。
+                            </div>
+                            <button class="expand-btn text-[#4D6BFE] hover:text-blue-700 text-sm font-medium mt-2 flex items-center" style="display: none;">
+                                <span class="expand-text">展开全文</span>
+                                <i class="fas fa-chevron-down ml-1 expand-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-item">纪实文学</span>
+                        <span class="tag-item">社会议题</span>
+                        <span class="tag-item">深度阅读</span>
+                    </div>
+                </div>
+                <!-- 宝藏3 结束 -->
 
             </div>
         </section>
-        <!-- === 模块四：宝藏分享・高能时刻 结束 === -->
+        <!-- 四、宝藏分享・高能时刻 结束 -->
 
         <!-- 底部日期导航 -->
         <nav class="w-full mt-12" aria-label="日期导航（底部）">
@@ -1547,7 +1510,6 @@
             </div>
         </nav>
 
-        <!-- === 文件底部 开始 === -->
         <footer class="w-full mt-16" role="contentinfo">
             <div class="bento-card p-8">
                 <div class="text-center text-gray-700 space-y-3">
@@ -1558,7 +1520,7 @@
                         </div>
                         <div class="flex items-center">
                             <i class="fas fa-robot mr-2 text-[#4D6BFE]"></i>
-                            <span>报告生成于 2026-08-29 23:59:59</span>
+                            <span>报告生成于 2026-08-29 23:59:00</span>
                         </div>
                     </div>
                     <p class="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
@@ -1567,7 +1529,6 @@
                 </div>
             </div>
         </footer>
-        <!-- === 文件底部 结束 === -->
     </div>
 
     <!-- 页面右下角悬浮按钮集 -->
@@ -1615,6 +1576,7 @@
     </div>
 
     <script>
+        // 漫道日报：历史汇总与导航
         const GJ_BASE_URL = 'https://missniannian.github.io/daydayup';
         const GJ_FILE_PREFIX = '漫道日报_';
         const GJ_SUFFIX = '.html';
@@ -1628,7 +1590,7 @@
             initBackToTop();
             initThemeToggle();
             initTocHighlight();
-
+            
             const numberElements = document.querySelectorAll('.number-display');
             numberElements.forEach(element => {
                 const finalValueText = element.textContent.replace(/,/g, '');
@@ -1656,7 +1618,7 @@
             });
 
             initExpandableContent();
-
+            
             try {
                 initDailyNavigation();
             } catch (e) {
@@ -1669,10 +1631,8 @@
             if (!currentDateStr) return;
 
             const dt = new Date(currentDateStr);
-            const prev = new Date(dt);
-            prev.setDate(prev.getDate() - 1);
-            const next = new Date(dt);
-            next.setDate(next.getDate() + 1);
+            const prev = new Date(dt); prev.setDate(prev.getDate() - 1);
+            const next = new Date(dt); next.setDate(next.getDate() + 1);
 
             const prevStr = formatDate(prev);
             const nextStr = formatDate(next);
@@ -1696,7 +1656,7 @@
             };
 
             const isLocalFile = window.location.protocol === 'file:';
-
+            
             if (isLocalFile) {
                 const prevHandler = () => {
                     const [year, month] = prevStr.split('-');
@@ -1720,7 +1680,7 @@
 
                     updateButtons(prevButtons, !!pe.ok, prevHandler);
                     updateButtons(nextButtons, !!ne.ok, nextHandler);
-                }).catch(() => {
+                }).catch(()=>{
                     updateButtons(prevButtons, false, null);
                     updateButtons(nextButtons, false, null);
                 });
@@ -1731,9 +1691,9 @@
             const [year, month] = dateStr.split('-');
             const monthNoPad = String(parseInt(month, 10));
             const url = `${GJ_BASE_URL}/${year}年/${year}年${monthNoPad}月/${GJ_FILE_PREFIX}${dateStr}${GJ_SUFFIX}`;
-
+            
             return fetch(url, { method: 'HEAD', cache: 'no-store' })
-                .then(r => r.ok ? { ok: true, url: url } :
+                .then(r => r.ok ? { ok: true, url: url } : 
                     fetch(url, { method: 'GET', cache: 'no-store' })
                         .then(r2 => r2.ok ? { ok: true, url: url } : { ok: false })
                 )
@@ -1760,7 +1720,7 @@
 
         function formatDate(d) {
             const y = d.getFullYear();
-            const m = pad2(d.getMonth() + 1);
+            const m = pad2(d.getMonth()+1);
             const dd = pad2(d.getDate());
             return `${y}-${m}-${dd}`;
         }
@@ -1822,7 +1782,7 @@
 
         function initBackToTop() {
             const btn = document.getElementById('backToTop');
-
+            
             window.addEventListener('scroll', () => {
                 if (window.pageYOffset > 300) {
                     btn.classList.add('visible');
@@ -1830,7 +1790,7 @@
                     btn.classList.remove('visible');
                 }
             });
-
+            
             btn.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
@@ -1839,20 +1799,20 @@
         function initThemeToggle() {
             const btn = document.getElementById('themeToggle');
             const icon = document.getElementById('themeIcon');
-
+            
             document.documentElement.classList.remove('dark-mode-preload');
-
+            
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode');
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
             }
-
+            
             btn.addEventListener('click', () => {
                 document.body.classList.toggle('dark-mode');
                 const isDark = document.body.classList.contains('dark-mode');
-
+                
                 if (isDark) {
                     icon.classList.remove('fa-moon');
                     icon.classList.add('fa-sun');
@@ -1868,10 +1828,10 @@
         function initTocHighlight() {
             const sections = ['section-overview', 'section-topics', 'section-qa', 'section-highlights'];
             const tocLinks = document.querySelectorAll('.toc-link');
-
+            
             window.addEventListener('scroll', () => {
                 let current = '';
-
+                
                 sections.forEach(sectionId => {
                     const section = document.getElementById(sectionId);
                     if (section) {
@@ -1882,7 +1842,7 @@
                         }
                     }
                 });
-
+                
                 tocLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === '#' + current) {
@@ -1896,10 +1856,10 @@
             navigator.clipboard.writeText(text).then(() => {
                 const icon = button.querySelector('i');
                 const originalClass = icon.className;
-
+                
                 button.classList.add('copied');
                 icon.className = 'fas fa-check';
-
+                
                 setTimeout(() => {
                     button.classList.remove('copied');
                     icon.className = originalClass;
@@ -1912,39 +1872,39 @@
 
         function initExpandableContent() {
             const expandableContents = document.querySelectorAll('.expandable-content');
-
+            
             expandableContents.forEach(container => {
                 const charLimit = parseInt(container.getAttribute('data-char-limit')) || 200;
                 const contentPreview = container.querySelector('.content-preview');
                 const expandBtn = container.querySelector('.expand-btn');
-
+                
                 if (!contentPreview || !expandBtn) return;
-
+                
                 const fullContent = contentPreview.innerHTML;
                 const fullText = contentPreview.textContent || contentPreview.innerText;
-
+                
                 if (fullText.length > charLimit) {
                     const tempDiv = document.createElement('div');
                     tempDiv.innerHTML = fullContent;
-
+                    
                     const truncatedText = fullText.substring(0, charLimit);
-
+                    
                     let truncatedContent = '';
                     let charCount = 0;
-
+                    
                     const walker = document.createTreeWalker(
                         tempDiv,
                         NodeFilter.SHOW_TEXT,
                         null,
                         false
                     );
-
+                    
                     let node;
                     const textNodes = [];
                     while (node = walker.nextNode()) {
                         textNodes.push(node);
                     }
-
+                    
                     for (let textNode of textNodes) {
                         const text = textNode.textContent;
                         if (charCount + text.length <= charLimit) {
@@ -1953,7 +1913,7 @@
                             const remainingChars = charLimit - charCount;
                             textNode.textContent = text.substring(0, remainingChars) + '...';
                             charCount = charLimit;
-
+                            
                             let currentNodeToClearAfter = textNode;
                             while (currentNodeToClearAfter && currentNodeToClearAfter !== tempDiv) {
                                 let sibling = currentNodeToClearAfter.nextSibling;
@@ -1967,16 +1927,16 @@
                             break;
                         }
                     }
-
+                    
                     const previewContent = tempDiv.innerHTML;
-
+                    
                     contentPreview.innerHTML = previewContent;
                     contentPreview.classList.add('collapsed');
                     expandBtn.style.display = 'flex';
-
+                    
                     expandBtn.addEventListener('click', function() {
                         const isExpanded = expandBtn.classList.contains('expanded');
-
+                        
                         if (isExpanded) {
                             contentPreview.innerHTML = previewContent;
                             contentPreview.classList.add('collapsed');
